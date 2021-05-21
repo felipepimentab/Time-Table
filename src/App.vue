@@ -8,7 +8,7 @@
 
 <style lang="scss">
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Nue', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -17,13 +17,13 @@
 
 #nav {
   padding: 30px;
-
+  display: none;
   a {
     font-weight: bold;
-    color: #2c3e50;
+    color: #6f7f8f;
 
     &.router-link-exact-active {
-      color: #42b983;
+      color: #7df7c0;
     }
   }
 }
