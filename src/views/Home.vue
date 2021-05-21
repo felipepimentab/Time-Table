@@ -45,7 +45,11 @@ $rosa: #b3a19f;
 }
 
 body {
-  background: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/background-dark-8k.jpg), cover, no-repeat;
+  background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/big-sur.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100vw 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
