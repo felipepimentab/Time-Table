@@ -1,18 +1,24 @@
 <template>
   <div class="home">
     <h1 class="titulo">Grade Horária</h1>
-    <Grade msg="Grade Horária"/>
+    <Grade/>
+    <Detalhes/>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import Grade from '@/components/Grade.vue'
+import Grade from '@/components/Grade.vue';
+import Detalhes from '@/components/Detalhes.vue';
 
 export default {
   name: 'Home',
+  props: {
+    disciplinas: Object,
+  },
   components: {
-    Grade
+    Grade,
+    Detalhes,
   }
 }
 </script>
@@ -44,35 +50,35 @@ $rosa: #b3a19f;
   src: url(SF-Pro-Rounded-Bold.ttf);
 }
 
-body {
-  background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/big-sur.jpg);
+html {
+  background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/big-sur-dark.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100vw 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: 100vw;
   height: 100vh;
-  padding: 0;
-  margin: 0;
+
 }
 
 .home {
   width: 100vw;
-  height: 90vh;
-  padding: 0 0 10vh 0;
+  height: 100vh;
+  padding: 0;
   margin: 0;
+  border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .titulo {
   font-family: 'San Francisco';
   color: $cinza-claro; 
   align-self: center;
+  margin: 2rem;
 }
 </style>
