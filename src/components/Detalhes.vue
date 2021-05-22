@@ -2,8 +2,13 @@
     <div id="detalhes">
         <h2>{{ codigo }}</h2>
         <h3>{{ nome }}</h3>
-        <h4>{{ professor }}</h4>
-        <a :href="link">{{ site }}</a>
+        <h4>Professor: {{ professor }}</h4>
+        <a :href="link">Site: {{ site }}</a>
+        <ul>
+            <li>Prova 1</li>
+            <li>Prova 2</li>
+            <li>Prova 3</li>
+        </ul>
     </div>
 </template>
 
@@ -16,11 +21,17 @@ export default {
         professor: String,
         site: String,
         link: String,
+        tarefas: Array,
     }
 }
 </script>
 
 <style lang="scss" scoped>
+$cinza-escuro: #404040;
+$cinza-mais-escuro: #202020;
+$cinza-pastel: #d6d6d6;
+$cinza-claro: #ebebeb;
+
 #detalhes {
     width: 70%;
     max-width: 850px;
@@ -32,12 +43,19 @@ export default {
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 4rem;
-    h2, h3, a {
+    align-items: flex-start;
+    margin: 3rem 0 3rem 0;
+    padding: 10px;
+    h2, h3, h4, a, li {
         font-family: 'San Francisco';
-        color: #ebebeb;
-        margin: 0;
+        margin: 0.4rem;
+        text-decoration: none;
+    }
+    h2, h3, li {
+        color: $cinza-claro;
+    }
+    h4, a {
+        color: $cinza-pastel;
     }
 }
 </style>

@@ -64,6 +64,7 @@ export default {
   display: grid;
   grid-template-rows: 3rem auto auto auto auto;
   grid-template-columns: 3rem auto auto auto auto auto;
+  padding: 10px;
 }
 
 .vazio {
