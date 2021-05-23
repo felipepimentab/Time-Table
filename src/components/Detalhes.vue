@@ -4,10 +4,8 @@
         <h3>{{ nome }}</h3>
         <h4>Professor: {{ professor }}</h4>
         <a :href="link">Site: {{ site }}</a>
-        <ul>
-            <li>Prova 1</li>
-            <li>Prova 2</li>
-            <li>Prova 3</li>
+        <ul :key="tarefa.id" v-for="tarefa in tarefas">
+            <li>{{ tarefa }} </li>       
         </ul>
     </div>
 </template>

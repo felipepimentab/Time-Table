@@ -2,7 +2,7 @@
   <div class="home">
     <h1 class="titulo">Grade Horária</h1>
     <Grade/>
-    <Detalhes codigo="SEP0587" nome="Princípios de Economia" professor= "Humberto Filipe de Andrade Januário Bettini" site="Moodle" link="#" tarefas=[0,1,2,3] />
+    <Detalhes codigo="SEP0587" nome="Princípios de Economia" professor= "Humberto Filipe de Andrade Januário Bettini" site="Moodle" link="#" tarefas=1234 />
     <p>Designed by Felipe Pimenta &copy; in Vitória</p>
   </div>
 </template>
@@ -86,7 +86,7 @@ export default {
   components: {
     Grade,
     Detalhes,
-  }
+  },
 }
 </script>
 

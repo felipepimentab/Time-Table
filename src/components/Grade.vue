@@ -8,10 +8,10 @@
     <div class="dia"><h3>Sexta</h3></div>
 
     <div class="horario"><h3>8:10</h3></div>
-    <Bloco cor="vermelho" codigo="SEL0401" nome="Eletrônica de Potência"/>
+    <Bloco cor="vermelho" codigo="SEL0401" nome="Eletrônica de Potência" id="1"/>
     <Bloco/>
-    <Bloco cor="laranja" codigo="SEL0310" nome="Ondas Eletromagnéticas"/>
-    <Bloco cor="laranja" codigo="SEL0310" nome="Ondas Eletromagnéticas"/>
+    <Bloco cor="laranja" codigo="SEL0310" nome="Ondas Eletromagnéticas" id="2"/>
+    <Bloco cor="laranja" codigo="SEL0310" nome="Ondas Eletromagnéticas" id="2"/>
     <Bloco/>
     <div class="horario"><h3>10:10</h3></div>
     <Bloco/>
