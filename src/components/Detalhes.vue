@@ -1,10 +1,12 @@
 <template>
     <div id="detalhes">
-        <h2>{{ codigo }}</h2>
-        <h3>{{ nome }}</h3>
-        <h4>Professor: {{ professor }}</h4>
-        <a :href="link">Site: {{ site }}</a>
-        <ul :key="tarefa.id" v-for="tarefa in tarefas">
+        <h2>{{ disciplina.codigo }}</h2>
+        <h3>{{ disciplina.nome }}</h3>
+        <h4>Professor: {{ disciplina.professor }}</h4>
+        <div class="link">
+            <p>Site:</p><a :href="disciplina.link">{{ disciplina.site }}</a>
+        </div>
+        <ul :key="tarefa.id" v-for="tarefa in disciplina.tarefas">
             <li>{{ tarefa }} </li>       
         </ul>
     </div>
@@ -14,12 +16,7 @@
 export default {
     name: 'Detalhes',
     props: {
-        codigo: String,
-        nome: String,
-        professor: String,
-        site: String,
-        link: String,
-        tarefas: Array,
+        disciplina: Object,
     }
 }
 </script>
@@ -44,16 +41,23 @@ $cinza-claro: #ebebeb;
     align-items: flex-start;
     margin: 3rem 0 3rem 0;
     padding: 10px;
-    h2, h3, h4, a, li {
-        font-family: 'San Francisco';
+    h2, h3, h4, li, a, p {
         margin: 0.4rem;
-        text-decoration: none;
     }
     h2, h3, li {
+        font-family: 'San Francisco';
         color: $cinza-claro;
     }
-    h4, a {
+    h4, a, p {
         color: $cinza-pastel;
+    }
+    .link {
+        display: flex;
+        align-items: center;
+    }
+    a, p {
+        padding: 0;
+        font-weight: 400;
     }
 }
 </style>

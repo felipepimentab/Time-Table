@@ -1,7 +1,7 @@
 <template>
-    <div @click="onClick(id)" id="bloco" :class="cor">
-      <h3>{{ codigo }}</h3>
-      <h4>{{ nome }}</h4>
+    <div @click="detalhe(index)" id="bloco" :class=" index ? disciplina.cor : ' '">
+      <h3>{{ index ? disciplina.codigo : ' ' }}</h3>
+      <h4>{{ index ? disciplina.nome : ' ' }}</h4>
     </div>
 </template>
 
@@ -9,21 +9,15 @@
 export default {
   name: 'Bloco',
   props: {
-    cor: String,
-    codigo: String,
-    nome: String,
-    id: Number,
+    disciplina: Object,
+    index: Number,
   },
   methods: {
-    onClick(id) {
-      console.log(id)
+    detalhe(index) {
+      this.$emit('detalhe-index', (index ? index : 0))
     }
   },
-  data() {
-    return {
-      
-    }
-  }
+  emits: ['detalhe'],
 }
 </script>
 
