@@ -1,7 +1,7 @@
 <template>
-    <div @click="detalhe(index)" id="bloco" :class=" index ? disciplina.cor : ' '">
-      <h3>{{ index ? disciplina.codigo : ' ' }}</h3>
-      <h4>{{ index ? disciplina.nome : ' ' }}</h4>
+    <div @click="detalhe(index)" id="bloco" :class=" index!=null ? disciplina.cor : ' '">
+      <h3>{{ index!=null ? disciplina.codigo : ' ' }}</h3>
+      <h4>{{ index!=null ? disciplina.nome : ' ' }}</h4>
     </div>
 </template>
 
@@ -14,10 +14,10 @@ export default {
   },
   methods: {
     detalhe(index) {
-      this.$emit('detalhe-index', (index ? index : 0))
+      if (index!=null) {this.$emit('detalhe-index', index)}
     }
   },
-  emits: ['detalhe'],
+  emits: ['detalhe-index'],
 }
 </script>
 
@@ -28,24 +28,26 @@ $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
 #bloco {
-  min-width: 100px;
-  min-height: 100px;
+  padding: 5px;
+  margin: 3px;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: $cinza-mais-escuro;
   border-radius: 5px;
-  margin: 0.2rem;
-  padding: 0.5rem;
   h3 {
     font-family: 'San Francisco';
-    margin: 0.1rem;
     font-weight: bolder;
+    margin: 0;
+    padding: 0;
   }
   h4 {
-    margin: 0.1rem;
     font-weight: bold;
+    display: none;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -152,5 +154,9 @@ $cinza-claro: #ebebeb;
       rgba(179, 161, 159, 0.6)
     );
   }
+}
+
+@media screen and (max-width: 1000px) {
+
 }
 </style>

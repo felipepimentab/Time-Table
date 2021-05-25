@@ -62,9 +62,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 #grade {
+  width: calc(100% - 2rem);
+  margin: 0;
   background: rgb(36, 36, 36);
-  width: 70%;
-  max-width: 850px;
   background: linear-gradient(
     to right bottom,
     rgba(36, 36, 36, 0.6),
@@ -72,20 +72,24 @@ export default {
   );
   border-radius: 10px;
   display: grid;
-  grid-template-rows: 3rem auto auto auto auto;
-  grid-template-columns: 3rem auto auto auto auto auto;
-  padding: 10px;
-}
-
-.vazio {
-  background: rgba(0,0,0,0);
+  grid-template-rows: 2rem auto auto auto auto;
+  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
 }
 
 .dia, .horario {
   font-family: 'San Francisco';
+  font-size: 12px;
   color: #ebebeb;
   display: flex;
   align-items: center;
   justify-content: center;
+  h3 {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  
 }
 </style>

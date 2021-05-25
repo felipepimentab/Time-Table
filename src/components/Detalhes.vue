@@ -1,9 +1,9 @@
 <template>
-    <div id="detalhes">
+    <div v-if="disciplina" id="detalhes">
         <h2>{{ disciplina.codigo }}</h2>
         <h3>{{ disciplina.nome }}</h3>
         <h4>Professor: {{ disciplina.professor }}</h4>
-        <div class="link">
+        <div v-if="disciplina.link!='#'" class="link">
             <p>Site:</p><a :href="disciplina.link">{{ disciplina.site }}</a>
         </div>
         <ul :key="tarefa.id" v-for="tarefa in disciplina.tarefas">
@@ -28,8 +28,9 @@ $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
 #detalhes {
-    width: 70%;
-    max-width: 850px;
+    width: calc(100% - 3rem);
+    padding: 10px;
+    margin-top: 2rem;
     background: linear-gradient(
     to right bottom,
     rgba(36, 36, 36, 0.6),
@@ -39,8 +40,7 @@ $cinza-claro: #ebebeb;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 3rem 0 3rem 0;
-    padding: 10px;
+    text-align: start;
     h2, h3, h4, li, a, p {
         margin: 0.4rem;
     }
@@ -57,7 +57,7 @@ $cinza-claro: #ebebeb;
     }
     a, p {
         padding: 0;
-        font-weight: 400;
+        font-weight: 600;
     }
 }
 </style>

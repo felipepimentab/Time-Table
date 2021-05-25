@@ -28,7 +28,7 @@ export default {
            6, null, null, null, null],
       disciplinas: [
         {
-          "codigo":"SEL0401",
+          "codigo":"SEL 0401",
           "nome":"Eletrônica de Potência",
           "professor":"José Roberto Boffino de Almeida",
           "site":"Moodle",
@@ -37,7 +37,7 @@ export default {
           "cor":"vermelho"
         },
         {
-          "codigo":"SEL0310",
+          "codigo":"SEL 0310",
           "nome":"Ondas Eletromagnéticas",
           "professor":"Leonardo André Ambrósio",
           "site":"Moodle",
@@ -46,7 +46,7 @@ export default {
           "cor":"laranja"
         },
         {
-          "codigo":"SEL0317",
+          "codigo":"SEL 0317",
           "nome":"Laboratório de Circuitos Eletrônicos II",
           "professor":"Marlon Rodrigues Garcia",
           "site":"Não tem site",
@@ -55,7 +55,7 @@ export default {
           "cor":"amarelo"
         },
         {
-          "codigo":"SEL0315",
+          "codigo":"SEL 0315",
           "nome":"Circuitos Eletrônicos III",
           "professor":"João Paulo Pereira do Carmo",
           "site":"Não tem site",
@@ -64,7 +64,7 @@ export default {
           "cor":"verde"
         },
         {
-          "codigo":"SME0320",
+          "codigo":"SME 0320",
           "nome":"Estatística I",
           "professor":"Reiko Aoki",
           "site":"Moodle",
@@ -73,7 +73,7 @@ export default {
           "cor":"azul"
         },
         {
-          "codigo":"SMA0356",
+          "codigo":"SMA 0356",
           "nome":"Cálculo IV",
           "professor":"Sergio Henrique Monari Soares",
           "site":"Moodle",
@@ -82,12 +82,12 @@ export default {
           "cor":"roxo"
         },
         {
-          "codigo":"SEP0587",
+          "codigo":"SEP 0587",
           "nome":"Princípios de Economia",
           "professor":"Humberto Filipe de Andrade Januário Bettini",
           "site":"Não tem site",
           "link":"#",
-          "tarefas":[],
+          "tarefas":["Texto preliminar - 07/06", "P1 - 28/06", "Texto parcial - 12/07", "Texto final - 26/07", "Vídeo - 16/08"],
           "cor":"rosa"
         },
       ]
@@ -107,32 +107,16 @@ $cinza-mais-escuro: #202020;
 $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
-@font-face {
-  font-family: 'San Francisco';
-  src: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/SF-Pro-Rounded-Bold.ttf);
-}
-
-html {
-  background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/big-sur-dark.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: 100vw 100vh;
-  width: auto;
-  height: auto;
-
-}
-
 .home {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
   padding: 0;
   margin: 0;
   border: none;
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: absolute;
   top: 0;
   left: 0;
   p {
@@ -146,6 +130,10 @@ html {
   font-family: 'San Francisco';
   color: $cinza-claro; 
   align-self: center;
-  margin: 2rem;
+  margin: 1rem;
+}
+
+@media screen and (max-width: 1000px) {
+
 }
 </style>
