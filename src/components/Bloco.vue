@@ -156,7 +156,7 @@ $cinza-claro: #ebebeb;
   }
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 700px) {
   #bloco {
     padding: 10px;
     margin: 5px;
