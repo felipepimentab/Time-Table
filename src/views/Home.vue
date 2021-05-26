@@ -133,7 +133,9 @@ $cinza-claro: #ebebeb;
   margin: 1rem;
 }
 
-@media screen and (max-width: 1000px) {
-
+@media screen and (min-width: 1000px) {
+  .home {
+    max-width: 1000px;
+  }
 }
 </style>

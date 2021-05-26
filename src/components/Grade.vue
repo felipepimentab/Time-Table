@@ -89,7 +89,9 @@ export default {
   }
 }
 
-@media screen and (max-width: 1000px) {
-  
+@media screen and (min-width: 1000px) {
+  #grade {
+    grid-template-columns: 6% 18.8% 18.8% 18.8% 18.8% 18.8%;
+  }
 }
 </style>

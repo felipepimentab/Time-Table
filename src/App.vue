@@ -23,7 +23,7 @@ html {
   min-width: 100vw;
   min-height: 100vh;
   background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/big-sur-dark.jpg);
-  background-position: center;
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;

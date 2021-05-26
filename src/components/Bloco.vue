@@ -156,7 +156,14 @@ $cinza-claro: #ebebeb;
   }
 }
 
-@media screen and (max-width: 1000px) {
-
+@media screen and (min-width: 1000px) {
+  #bloco {
+    padding: 10px;
+    margin: 5px;
+    min-height: 75px;
+    h4 {
+      display: block;
+    }
+  }
 }
 </style>
