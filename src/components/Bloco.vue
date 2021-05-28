@@ -27,6 +27,321 @@ $cinza-mais-escuro: #202020;
 $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
+.lime {
+  background: linear-gradient(
+    to right bottom,
+    rgba(214, 255, 173, 0.8),
+    rgba(214, 255, 173, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(164, 205, 123, 0.8),
+      rgba(164, 205, 123, 0.7)
+    );
+  }
+}
+
+.spring {
+  background: linear-gradient(
+    to right bottom,
+    rgba(182, 255, 182, 0.8),
+    rgba(182, 255, 182, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(132, 205, 132, 0.8),
+      rgba(132, 205, 132, 0.7)
+    );
+  }
+}
+
+.sea-foam {
+  background: linear-gradient(
+    to right bottom,
+    rgba(180, 255, 217, 0.8),
+    rgba(180, 255, 217, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(130, 205, 167, 0.8),
+      rgba(130, 205, 167, 0.7)
+    );
+  }
+}
+
+.turquoise {
+  background: linear-gradient(
+    to right bottom,
+    rgba(161, 255, 255, 0.8),
+    rgba(161, 255, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(111, 205, 205, 0.8),
+      rgba(111, 205, 205, 0.7)
+    );
+  }
+}
+
+.aqua {
+  background: linear-gradient(
+    to right bottom,
+    rgba(167, 209, 252, 0.8),
+    rgba(167, 209, 252, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(117, 169, 202, 0.8),
+      rgba(117, 169, 202, 0.7)
+    );
+  }
+}
+
+.blueberry {
+  background: linear-gradient(
+    to right bottom,
+    rgba(183, 183, 255, 0.8),
+    rgba(183, 183, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(133, 133, 205, 0.8),
+      rgba(133, 133, 205, 0.7)
+    );
+  }
+}
+
+.grape {
+  background: linear-gradient(
+    to right bottom,
+    rgba(214, 173, 255, 0.8),
+    rgba(214, 173, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(164, 123, 205, 0.8),
+      rgba(164, 123, 205, 0.7)
+    );
+  }
+}
+
+.magenta {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 184, 255, 0.8),
+    rgba(255, 184, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(205, 134, 205, 0.8),
+      rgba(205, 134, 205, 0.7)
+    );
+  }
+}
+
+.strawberry {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 173, 214, 0.8),
+    rgba(255, 173, 214, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(205, 123, 164, 0.8),
+      rgba(205, 123, 164, 0.7)
+    );
+  }
+}
+
+.salmon {
+  background: linear-gradient(
+    to right bottom,
+    rgba(253, 166, 166, 0.8),
+    rgba(253, 166, 166, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(203, 116, 116, 0.8),
+      rgba(203, 116, 116, 0.7)
+    );
+  }
+}
+
+.cantaloupe {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 222, 175, 0.8),
+    rgba(255, 222, 175, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(205, 172, 125, 0.8),
+      rgba(205, 172, 125, 0.7)
+    );
+  }
+}
+
+.banana {
+  background: linear-gradient(
+    to right bottom,
+    rgba(252, 252, 175, 0.8),
+    rgba(252, 252, 175, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(202, 202, 125, 0.8),
+      rgba(202, 202, 125, 0.7)
+    );
+  }
+}
+
+.honeydew {
+  background: linear-gradient(
+    to right bottom,
+    rgba(233, 255, 190, 0.8),
+    rgba(233, 255, 190, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(183, 205, 140, 0.8),
+      rgba(183, 205, 140, 0.7)
+    );
+  }
+}
+
+.flora {
+  background: linear-gradient(
+    to right bottom,
+    rgba(184, 255, 184, 0.8),
+    rgba(184, 255, 184, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(134, 205, 134, 0.8),
+      rgba(134, 205, 134, 0.7)
+    );
+  }
+}
+
+.spindrift {
+  background: linear-gradient(
+    to right bottom,
+    rgba(200, 255, 237, 0.8),
+    rgba(200, 255, 237, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(150, 205, 187, 0.8),
+      rgba(150, 205, 187, 0.7)
+    );
+  }
+}
+
+.ice {
+  background: linear-gradient(
+    to right bottom,
+    rgba(187, 255, 255, 0.8),
+    rgba(187, 255, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(137, 205, 205, 0.8),
+      rgba(137, 205, 205, 0.7)
+    );
+  }
+}
+
+.sky {
+  background: linear-gradient(
+    to right bottom,
+    rgba(191, 234, 255, 0.8),
+    rgba(191, 234, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(141, 174, 205, 0.8),
+      rgba(141, 174, 205, 0.7)
+    );
+  }
+}
+
+.orchid {
+  background: linear-gradient(
+    to right bottom,
+    rgba(194, 194, 255, 0.8),
+    rgba(194, 194, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(148, 148, 205, 0.8),
+      rgba(148, 148, 205, 0.7)
+    );
+  }
+}
+
+.lavender {
+  background: linear-gradient(
+    to right bottom,
+    rgba(236, 198, 255, 0.8),
+    rgba(236, 198, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(186, 148, 205, 0.8),
+      rgba(186, 148, 205, 0.7)
+    );
+  }
+}
+
+.bubblegum {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 189, 255, 0.8),
+    rgba(255, 189, 255, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(205, 139, 205, 0.8),
+      rgba(205, 139, 205, 0.7)
+    );
+  }
+}
+
+.carnation {
+  background: linear-gradient(
+    to right bottom,
+    rgba(255, 177, 229, 0.8),
+    rgba(255, 177, 229, 0.7)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(205, 127, 179, 0.8),
+      rgba(205, 127, 179, 0.7)
+    );
+  }
+}
+
 #bloco {
   padding: 5px;
   margin: 3px;
@@ -48,111 +363,6 @@ $cinza-claro: #ebebeb;
     display: none;
     margin: 0;
     padding: 0;
-  }
-}
-
-.vermelho {
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 182, 174, 0.9),
-    rgba(255, 182, 174, 0.6)
-  );
-  &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(173, 124, 118, 0.9),
-      rgba(173, 124, 118, 0.6)
-    );
-  }
-}
-
-.laranja {
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 225, 174, 0.9),
-    rgba(255, 225, 174, 0.6)
-  );
-  &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(177, 156, 119, 0.9),
-      rgba(177, 156, 119, 0.6)
-    );
-  }
-}
-
-.amarelo {
-  background: linear-gradient(
-    to right bottom,
-    rgba(250, 252, 175, 0.9),
-    rgba(250, 252, 175, 0.6)
-  );
-  &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(173, 175, 123, 0.9),
-      rgba(173, 175, 123, 0.6)
-    );
-  }
-}
-
-.verde {
-  background: linear-gradient(
-    to right bottom,
-    rgba(176, 242, 194, 0.9),
-    rgba(176, 242, 194, 0.6)
-  );
-  &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(121, 167, 133, 0.9),
-      rgba(121, 167, 133, 0.6)
-    );
-  }
-}
-
-.azul {
-  background: linear-gradient(
-    to right bottom,
-    rgba(176, 194, 242, 0.9),
-    rgba(176, 194, 242, 0.6)
-  );
-  &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(123, 134, 167, 0.9),
-      rgba(123, 134, 167, 0.6)
-    );
-  }
-}
-
-.roxo {
-  background: linear-gradient(
-    to right bottom,
-    rgba(233, 176, 242, 0.9),
-    rgba(233, 176, 242, 0.6)
-  );
-  &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(151, 116, 156, 0.9),
-      rgba(151, 116, 156, 0.6)
-    );
-  }
-}
-
-.rosa {
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 228, 225, 0.9),
-    rgba(255, 228, 225, 0.6)
-  );
-  &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(179, 161, 159, 0.9),
-      rgba(179, 161, 159, 0.6)
-    );
   }
 }
 

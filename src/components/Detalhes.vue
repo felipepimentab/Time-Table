@@ -6,8 +6,8 @@
         <div v-if="disciplina.link!='#'" class="link">
             <p>Site:</p><a :href="disciplina.link">{{ disciplina.site }}</a>
         </div>
-        <ul :key="tarefa.id" v-for="tarefa in disciplina.tarefas">
-            <li>{{ tarefa }} </li>       
+        <ul>
+            <li :key="tarefa.id" v-for="tarefa in disciplina.tarefas">{{ tarefa }} </li>       
         </ul>
     </div>
 </template>
@@ -33,8 +33,8 @@ $cinza-claro: #ebebeb;
     margin-top: 2rem;
     background: linear-gradient(
     to right bottom,
-    rgba(36, 36, 36, 0.6),
-    rgba(36, 36, 36, 0.5)
+    rgba(10, 10, 10, 0.8),
+    rgba(10, 10, 10, 0.7)
     );
     border-radius: 10px;
     display: flex;

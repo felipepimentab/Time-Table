@@ -1,30 +1,33 @@
 <template>
-  <div class="home">
-    <h1 class="titulo">Grade Horária</h1>
-    <Grade @detalhe-id="detalheId" :disciplinas="disciplinas" :org="organizador"/>
-    <Detalhes :disciplina="disciplinas[i]"/>
+  <div class="edit">
+    <h1>Edite sua grade</h1>
+    <Grade :disciplinas="disciplinas" :org="organizador"/>
+    <Lista :disciplinas="disciplinas"/>
+    <Adicionar/>
   </div>
+  
 </template>
 
 <script>
-// @ is an alias to /src
 import Grade from '@/components/Grade.vue';
-import Detalhes from '@/components/Detalhes.vue';
+import Lista from '@/components/Lista.vue';
+import Adicionar from '@/components/Adicionar.vue';
 
 export default {
-  name: 'Home',
+  name: 'Edit',
   components: {
     Grade,
-    Detalhes,
+    Lista,
+    Adicionar
   },
   data: function() {
     return {
       i: null,
       organizador: [
-           0, null,    1,    1, null,
-        null,    2,    0,    3,    3,
-           4,    5,    4,    5, null,
-           6, null, null, null, null],
+           0,    1,    2,    3,    4,
+           5,    6, null,    0,    0,
+           0,    0,    0,    0,    0,
+           0,    0,    0,    0,    0],
       disciplinas: [
         {
           "codigo":"SEL 0401",
@@ -91,22 +94,17 @@ export default {
         },
       ]
     }
-  },
-    methods: {
-    detalheId(index) {
-    this.i = index;
-    }
-  },
+  }
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 $cinza-escuro: #404040;
 $cinza-mais-escuro: #202020;
 $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
-.home {
+.edit {
   width: 100%;
   max-width: 500px;
   height: auto;
@@ -118,23 +116,22 @@ $cinza-claro: #ebebeb;
   align-items: center;
   top: 0;
   left: 0;
-}
-
-.titulo {
-  font-family: 'San Francisco';
-  color: $cinza-claro; 
-  align-self: center;
-  margin: 1rem;
+  h1 {
+    font-family: 'San Francisco';
+    color: $cinza-claro; 
+    align-self: center;
+    margin: 1rem;
+  }
 }
 
 @media screen and (min-width: 700px) {
-  .home {
+  .edit {
     max-width: 700px;
   }
 }
 
 @media screen and (min-width: 1000px) {
-  .home {
+  .edit {
     max-width: 1000px;
   }
 }
