@@ -28,14 +28,7 @@ $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
 #lista {
-    width: calc(100% - 3rem);
-    padding: 10px;
-    margin-top: 2rem;
-    background: linear-gradient(
-    to right bottom,
-    rgba(10, 10, 10, 0.8),
-    rgba(10, 10, 10, 0.7)
-    );
+    margin: 1rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -49,9 +42,12 @@ $cinza-claro: #ebebeb;
         margin: 0;
         padding: 0 0 0 20px;
     }
-    h2, h3, h4 {
+    h3, h4 {
         font-family: 'San Francisco';
         margin: 0.3rem 0 0.3rem 0;
+    }
+    h2 {
+        margin: 0;
     }
     h4 {
         color: $cinza-pastel;

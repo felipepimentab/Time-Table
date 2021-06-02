@@ -33,8 +33,8 @@ $cinza-claro: #ebebeb;
     margin-top: 2rem;
     background: linear-gradient(
     to right bottom,
-    rgba(10, 10, 10, 0.8),
-    rgba(10, 10, 10, 0.7)
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6)
     );
     border-radius: 10px;
     display: flex;

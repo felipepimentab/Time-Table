@@ -1,98 +1,28 @@
 <template>
-  <div class="edit">
-    <h1>Edite sua grade</h1>
-    <Grade :disciplinas="disciplinas" :org="organizador"/>
-    <Lista :disciplinas="disciplinas"/>
-    <Adicionar/>
+  <div id="edit" class="edit">
+    <div class="container">
+      <Lista :disciplinas="disciplinas"/>
+      <Adicionar :disciplinas="disciplinas"/>
+      <div class="botao"><button>Apagar todas as disciplinas</button></div>
+    </div>
+    
   </div>
   
 </template>
 
 <script>
-import Grade from '@/components/Grade.vue';
 import Lista from '@/components/Lista.vue';
 import Adicionar from '@/components/Adicionar.vue';
 
 export default {
   name: 'Edit',
   components: {
-    Grade,
     Lista,
     Adicionar
   },
   data: function() {
     return {
-      i: null,
-      organizador: [
-           0,    1,    2,    3,    4,
-           5,    6, null,    0,    0,
-           0,    0,    0,    0,    0,
-           0,    0,    0,    0,    0],
-      disciplinas: [
-        {
-          "codigo":"SEL 0401",
-          "nome":"Eletrônica de Potência",
-          "professor":"José Roberto Boffino de Almeida",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=87770",
-          "tarefas":[" Prova única - 14/07"],
-          "cor":"bubblegum"
-        },
-        {
-          "codigo":"SEL 0310",
-          "nome":"Ondas Eletromagnéticas",
-          "professor":"Leonardo André Ambrósio",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=86361",
-          "tarefas":[" Lista 01 - 19/05"," Lista 02 - 26/05"," Lista 03 - 09/06"," Lista 04 - 16/06"," Lista 05 - 23/06"," P1 - 24/07"," P2 - 31/07"],
-          "cor":"turquoise"
-        },
-        {
-          "codigo":"SEL 0317",
-          "nome":"Laboratório de Circuitos Eletrônicos II",
-          "professor":"Marlon Rodrigues Garcia",
-          "site":"Não tem site",
-          "link":"#",
-          "tarefas":[],
-          "cor":"blueberry"
-        },
-        {
-          "codigo":"SEL 0315",
-          "nome":"Circuitos Eletrônicos III",
-          "professor":"João Paulo Pereira do Carmo",
-          "site":"Não tem site",
-          "link":"#",
-          "tarefas":[" P1 - 11/06"," P2 - 23/07"],
-          "cor":"spring"
-        },
-        {
-          "codigo":"SME 0320",
-          "nome":"Estatística I",
-          "professor":"Reiko Aoki",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=88184",
-          "tarefas":[" P1 - 26/05"," P2 - 21/07"],
-          "cor":"sea-foam"
-        },
-        {
-          "codigo":"SMA 0356",
-          "nome":"Cálculo IV",
-          "professor":"Sergio Henrique Monari Soares",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=87079",
-          "tarefas":[" Atividades semanais no moodle"," P1 - 22/05"," P2 - 19/06"," P3 - 31/07"],
-          "cor":"salmon"
-        },
-        {
-          "codigo":"SEP 0587",
-          "nome":"Princípios de Economia",
-          "professor":"Humberto Filipe de Andrade Januário Bettini",
-          "site":"Não tem site",
-          "link":"#",
-          "tarefas":["Texto preliminar - 07/06", "P1 - 28/06", "Texto parcial - 12/07", "Texto final - 26/07", "Vídeo - 16/08"],
-          "cor":"banana"
-        },
-      ]
+      disciplinas: JSON.parse(localStorage.getItem('disciplinas')),
     }
   }
 }
@@ -103,6 +33,21 @@ $cinza-escuro: #404040;
 $cinza-mais-escuro: #202020;
 $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
+
+.container  {
+  width: calc(100% - 3rem);
+  padding: 10px;
+  margin-top: 2rem;
+  border-radius: 10px;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6)
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
 .edit {
   width: 100%;
@@ -122,6 +67,29 @@ $cinza-claro: #ebebeb;
     align-self: center;
     margin: 1rem;
   }
+}
+
+.botao {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  margin: 1rem;
+  padding: 1rem;
+  width: 100%;
+  max-width: 250px;
+  align-self: center;
+  border: none;
+  border-radius: 5px;
+  font-family: 'San Francisco';
+  font-size: 1.2rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(253, 83, 83, 0.9),
+    rgba(255, 83, 83, 0.8));
 }
 
 @media screen and (min-width: 700px) {

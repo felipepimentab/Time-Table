@@ -1,24 +1,24 @@
 <template>
     <div id="adicionar">
         <h2>Adicionar disciplina</h2>
-        <form action="">
+        <form @submit.prevent="adiciona()">
             <label for="codigo">Código da disciplina:</label><br>
-            <input type="text" name="codigo"><br>   
+            <input type="text" name="codigo" @input="disciplina.codigo = $event.target.value" :value="disciplina.codigo"><br>   
 
             <label for="nome">Nome da disciplina</label><br>
-            <input type="text" name="nome"><br>
+            <input type="text" name="nome" @input="disciplina.nome = $event.target.value" :value="disciplina.nome"><br>
 
             <label for="professor">Professor responsável:</label><br>
-            <input type="text" name="professor"><br>
+            <input type="text" name="professor" @input="disciplina.professor = $event.target.value" :value="disciplina.professor"><br>
 
             <label for="site">Site:</label><br>
-            <input type="text" name="site"><br>
+            <input type="text" name="site" @input="disciplina.site = $event.target.value" :value="disciplina.site"><br>
 
             <label for="link">Link:</label><br>
-            <input type="url" name="link"><br>
+            <input type="url" name="link" @input="disciplina.link = $event.target.value" :value="disciplina.link"><br>
 
             <label for="cor">Cor:</label><br>
-            <select name="cor" id="cor" class="drop-down">
+            <select name="cor" id="cor" class="drop-down" @input="disciplina.cor = $event.target.value" :value="disciplina.cor">
                 <option value="lime">Lime</option>
                 <option value="spring">Spring</option>
                 <option value="sea-foam">Sea Foam</option>
@@ -50,6 +50,30 @@
 <script>
 export default {
     name: 'Adicionar',
+    data: function() {
+        return {
+            disciplina: {
+                codigo: '',
+                nome: '',
+                professor: '',
+                site: '',
+                link: '',
+                cor: '',
+            }
+        }
+    },
+    props: {
+        disciplinas: Array,
+    },
+    methods: {
+        adiciona() {
+            let aux = this.disciplinas;
+            aux.push(this.disciplina);
+            localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas));
+            console.log(this.disciplinas);
+            this.disciplina = {codigo: '', nome: '', professor: '', site: '', link: '', cor: '',}
+        }
+    },
 }
 </script>
 
@@ -60,14 +84,14 @@ $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
 #adicionar {
-    width: calc(100% - 3rem);
-    padding: 10px;
-    margin-top: 2rem;
     background: linear-gradient(
-    to right bottom,
-    rgba(10, 10, 10, 0.8),
-    rgba(10, 10, 10, 0.7)
+        to right bottom,
+        rgba(255, 255, 255, 0.2),
+        rgba(255, 255, 255, 0.1)
     );
+    width: 100%;
+    padding: 1rem;
+    margin: 1rem;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -92,7 +116,7 @@ $cinza-claro: #ebebeb;
     }
     input {
         border: none;
-        margin: 1rem 0 1rem 0;
+        margin: 0.5rem 0 1rem 0;
         padding: 0.3rem;
         border-radius: 5px;
         font-family: 'San Francisco';
@@ -112,5 +136,11 @@ $cinza-claro: #ebebeb;
             );
         }
     }
+}
+
+@media screen and (min-width: 700px) {
+  #adicionar {
+    width: auto;
+  }
 }
 </style>

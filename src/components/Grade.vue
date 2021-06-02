@@ -53,7 +53,7 @@ export default {
   methods: {
     detalhe(index) {
       this.$emit('detalhe-id', index)
-    }
+    },
   },
   emits: ['detalhe-id'],
 }
@@ -63,11 +63,11 @@ export default {
 <style scoped lang="scss">
 #grade {
   width: calc(100% - 2rem);
-  margin: 0;
+  margin: 2rem 0 0 0;
   background: linear-gradient(
     to right bottom,
-    rgba(10, 10, 10, 0.8),
-    rgba(10, 10, 10, 0.7)
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6)
   );
   border-radius: 10px;
   display: grid;
