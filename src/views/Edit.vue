@@ -79,8 +79,7 @@ $cinza-claro: #ebebeb;
 button {
   margin: 1rem;
   padding: 1rem;
-  width: 100%;
-  max-width: 250px;
+  width: calc(100% - 2rem);
   align-self: center;
   border: none;
   border-radius: 5px;
@@ -88,13 +87,24 @@ button {
   font-size: 1.2rem;
   background: linear-gradient(
     to right bottom,
-    rgba(253, 83, 83, 0.9),
-    rgba(255, 83, 83, 0.8));
+    rgba(255, 100, 100, 0.9),
+    rgba(255, 100, 100, 0.8)
+  );
+  &:hover {
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 100, 100, 0.6),
+      rgba(255, 100, 100, 0.5)
+    );
+  }
 }
 
 @media screen and (min-width: 700px) {
   .edit {
     max-width: 700px;
+  }
+  button {
+    width: auto;
   }
 }
 

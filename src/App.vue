@@ -8,7 +8,7 @@
   </div>
   <router-view/>
   <div class="rodape">
-    <p @click="reset()">Desenvolvido por Felipe Pimenta em Vitória &copy;</p>
+    <p @click="reset()">Desenvolvido por Felipe Pimenta &copy; em Vitória </p>
     <div class="links">
       <a href="https://www.instagram.com/felipepimentab/"><Instagram/></a>
       <a href="https://twitter.com/felipepimentab"><Twitter/></a>
@@ -191,17 +191,17 @@ body {
   align-items: center;
   font-family: Montserrat;
   p {
-    font-weight: normal;
+    font-weight: bold;
     padding: 1rem;
     margin: 0;
   }
   .links {
-    width: 100%;
     display: flex;
-    justify-content: space-between;
+    align-items: center;
     a {
       text-decoration: none;
       color: black;
+      margin: 0 1rem 0 1rem;
     }
   }
 }

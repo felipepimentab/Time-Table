@@ -114,10 +114,14 @@ $cinza-claro: #ebebeb;
         padding: 0.25rem;
         font-family: 'San Francisco';
     }
+    form {
+        width: 100%;
+    }
     input {
         border: none;
         margin: 0.5rem 0 1rem 0;
         padding: 0.3rem;
+        width: calc(100% - 0.6rem);
         border-radius: 5px;
         font-family: 'San Francisco';
         background: linear-gradient(
