@@ -1,9 +1,11 @@
 <template>
   <div id="edit" class="edit">
     <div class="container">
-      <Lista :disciplinas="disciplinas"/>
+      <div class="wrap">
+      <Lista v-if="disciplinas" :key="disciplinas" :disciplinas="disciplinas"/>
       <Adicionar :disciplinas="disciplinas"/>
-      <div class="botao"><button>Apagar todas as disciplinas</button></div>
+      </div>
+      <div class="botao"><button @click="apaga()">Apagar todas as disciplinas</button></div>
     </div>
     
   </div>
@@ -24,6 +26,17 @@ export default {
     return {
       disciplinas: JSON.parse(localStorage.getItem('disciplinas')),
     }
+  },
+  methods: {
+    apaga() {
+      if(confirm('Tem certeza que deseja apagar todas as disciplinas?')) {
+        console.log('Todas as disciplinas foram apagadas');
+        localStorage.clear();
+        this.disciplinas = JSON.parse(localStorage.getItem('disciplinas'));
+      } else {
+        console.log('Nenhuma disciplina foi apagada');
+      }
+    }
   }
 }
 </script>
@@ -35,7 +48,7 @@ $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
 .container  {
-  width: calc(100% - 3rem);
+  width: auto;
   padding: 10px;
   margin-top: 2rem;
   border-radius: 10px;
@@ -45,12 +58,12 @@ $cinza-claro: #ebebeb;
     rgba(0, 0, 0, 0.6)
   );
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
 }
 
 .edit {
-  width: 100%;
+  width: calc(100% - 3rem);
   max-width: 500px;
   height: auto;
   padding: 0;
@@ -69,6 +82,14 @@ $cinza-claro: #ebebeb;
   }
 }
 
+.wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .botao {
   width: 100%;
   display: flex;
@@ -79,31 +100,24 @@ $cinza-claro: #ebebeb;
 button {
   margin: 1rem;
   padding: 1rem;
-  width: calc(100% - 2rem);
+  width: auto;
   align-self: center;
   border: none;
   border-radius: 5px;
   font-family: 'San Francisco';
   font-size: 1.2rem;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 100, 100, 0.9),
-    rgba(255, 100, 100, 0.8)
-  );
+  transition: all 200ms linear;
+  background-color: rgba(255, 100, 100, 0.8);
   &:hover {
-    background: linear-gradient(
-      to right bottom,
-      rgba(255, 100, 100, 0.6),
-      rgba(255, 100, 100, 0.5)
-    );
+    background-color: rgba(255, 100, 100, 0.5);
   }
 }
 
 @media screen and (min-width: 700px) {
   .edit {
-    max-width: 700px;
+    width: auto;
   }
-  button {
+  .botao {
     width: auto;
   }
 }

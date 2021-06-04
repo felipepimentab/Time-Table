@@ -32,6 +32,7 @@ export default {
     align-items: center;
     top: 0;
     left: 0;
+    font-size: 16px;
 }
 
 .container  {
@@ -52,6 +53,12 @@ export default {
     color: #ebebeb;
     text-align: start;
     text-justify: distribute;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .about {
+    max-width: 700px;
   }
 }
 </style>

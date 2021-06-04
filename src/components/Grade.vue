@@ -35,7 +35,6 @@
     <Bloco @detalhe-index="detalhe" :disciplina="disciplinas[org[18]]" :index="org[18]"/>
     <Bloco @detalhe-index="detalhe" :disciplina="disciplinas[org[19]]" :index="org[19]"/>
   </div>
- 
 </template>
 
 <script>

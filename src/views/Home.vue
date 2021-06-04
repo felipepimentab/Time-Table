@@ -1,7 +1,8 @@
 <template>
   <div id="home" class="home">
-    <Grade @load="teste()" @detalhe-id="detalheId" :disciplinas="disciplinas" :org="organizador"/>
+    <Grade @click="teste()" v-if="this.disciplinas" :key="this.disciplinas" @detalhe-id="detalheId" :disciplinas="disciplinas" :org="organizador"/>
     <Detalhes :disciplina="disciplinas ? disciplinas[i] : null"/>
+    <SemDisciplina v-if="!this.disciplinas" :key="this.disciplinas"/>
   </div>
 </template>
 
@@ -9,12 +10,14 @@
 // @ is an alias to /src
 import Grade from '@/components/Grade.vue';
 import Detalhes from '@/components/Detalhes.vue';
+import SemDisciplina from '@/components/SemDisciplina.vue';
 
 export default {
   name: 'Home',
   components: {
     Grade,
     Detalhes,
+    SemDisciplina,
   },
   data: function() {
     return {
@@ -28,7 +31,7 @@ export default {
       this.i = index;
       },
       teste() {
-        console.log(this.disciplinas)
+        console.log(this.disciplinas);
       }
   },
 }

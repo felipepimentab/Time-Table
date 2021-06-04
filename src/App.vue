@@ -112,13 +112,16 @@ export default {
 <style lang="scss">
 @font-face {
   font-family: 'San Francisco';
-  src: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/SF-Pro-Rounded-Bold.ttf);
+  src: url(../src/assets/SF-Pro-Rounded-Bold.ttf);
 }
-
+@font-face {
+  font-family: 'SF Pro';
+  src: url(../src/assets/SF-Pro-Regular.ttf);
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html {
-  font-family: 'Helvetica Nue', Helvetica, Arial, sans-serif;
+  font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
   font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -160,6 +163,7 @@ body {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  padding: 0;
   background: linear-gradient(
     to right bottom,
     rgba(0, 0, 0, 0.8),
@@ -174,7 +178,7 @@ body {
     font-family: 'San Francisco';
     padding: 1rem;
     margin: 0;
-    color: rgba($color: white, $alpha: 0.7);
+    color: rgba($color: white, $alpha: 0.5);
     font-weight: bolder;
     text-decoration: none;
     &.router-link-exact-active {
@@ -206,7 +210,10 @@ body {
   }
 }
 
-@media screen and (min-width: 1000px) {
-
+@media screen and (min-width: 350) {
+  .nav {
+  width: calc(100% - 2rem);
+  padding: 0 1rem 0 1rem;
+  }
 }
 </style>
