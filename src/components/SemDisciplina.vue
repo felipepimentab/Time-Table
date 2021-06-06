@@ -20,6 +20,7 @@ export default {
         rgba(0, 0, 0, 0.7),
         rgba(0, 0, 0, 0.6)
     );
+    backdrop-filter: blur(5px);
     width: auto;
     margin: 4rem;
     padding: 2rem;
