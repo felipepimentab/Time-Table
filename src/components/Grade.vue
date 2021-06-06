@@ -68,6 +68,7 @@ export default {
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.6)
   );
+  backdrop-filter: blur(5px);
   border-radius: 10px;
   display: grid;
   grid-template-rows: 2rem auto auto auto auto;

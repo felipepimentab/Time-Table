@@ -169,6 +169,7 @@ body {
     rgba(0, 0, 0, 0.8),
     rgba(0, 0, 0, 0.7)
   );
+  backdrop-filter: blur(5px);
   .subnav {
     display: flex;
     align-items: center;
