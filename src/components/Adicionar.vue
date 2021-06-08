@@ -3,19 +3,19 @@
         <h2>Adicionar disciplina</h2>
         <form @submit.prevent="adiciona()">
             <label for="codigo">Código da disciplina:</label><br>
-            <input type="text" name="codigo" class="infos" @input="disciplina.codigo = $event.target.value" :value="disciplina.codigo"><br>   
+            <input type="text" name="codigo" class="infos" v-model="disciplina.codigo"><br>   
 
             <label for="nome">Nome da disciplina</label><br>
-            <input type="text" name="nome" class="infos" @input="disciplina.nome = $event.target.value" :value="disciplina.nome"><br>
+            <input type="text" name="nome" class="infos" v-model="disciplina.nome"><br>
 
             <label for="professor">Professor responsável:</label><br>
-            <input type="text" name="professor" class="infos" @input="disciplina.professor = $event.target.value" :value="disciplina.professor"><br>
+            <input type="text" name="professor" class="infos" v-model="disciplina.professor"><br>
 
             <label for="site">Site:</label><br>
-            <input type="text" name="site" class="infos" @input="disciplina.site = $event.target.value" :value="disciplina.site"><br>
+            <input type="text" name="site" class="infos" v-model="disciplina.site"><br>
 
             <label for="link">Link:</label><br>
-            <input type="url" name="link" class="infos" @input="disciplina.link = $event.target.value" :value="disciplina.link"><br>
+            <input type="url" name="link" class="infos" v-model="disciplina.link"><br>
 
             <h3>Horário</h3>
 
@@ -23,80 +23,80 @@
                 <div class="horario__dia">
                     <h4>Segunda</h4>
 
-                    <input type="checkbox" name="seg-0810" value="seg-0810" class="horario__input">
+                    <input type="checkbox" name="seg-0810" value="seg-0810" class="horario__input" v-model="posicao[0]">
                     <label class="horario__label" for="seg-0810">8:10</label><br>
                     
-                    <input type="checkbox" name="seg-1010" value="seg-1010" class="horario__input">
+                    <input type="checkbox" name="seg-1010" value="seg-1010" class="horario__input" v-model="posicao[5]">
                     <label class="horario__label" for="seg-1010">10:10</label><br>
 
-                    <input type="checkbox" name="seg-1420" value="seg-1420" class="horario__input">
+                    <input type="checkbox" name="seg-1420" value="seg-1420" class="horario__input" v-model="posicao[10]">
                     <label class="horario__label" for="seg-1420">14:20</label><br>
 
-                    <input type="checkbox" name="seg-1620" value="seg-1620" class="horario__input">
+                    <input type="checkbox" name="seg-1620" value="seg-1620" class="horario__input" v-model="posicao[15]">
                     <label class="horario__label" for="seg-1620">16:20</label><br>
                 </div>
 
                 <div class="horario__dia">
                     <h4>Terça</h4>
 
-                    <input type="checkbox" name="ter-0810" value="ter-0810" class="horario__input">
+                    <input type="checkbox" name="ter-0810" value="ter-0810" class="horario__input" v-model="posicao[1]">
                     <label class="horario__label" for="ter-0810">8:10</label><br>
                     
-                    <input type="checkbox" name="ter-1010" value="ter-1010" class="horario__input">
+                    <input type="checkbox" name="ter-1010" value="ter-1010" class="horario__input" v-model="posicao[6]">
                     <label class="horario__label" for="ter-1010">10:10</label><br>
 
-                    <input type="checkbox" name="ter-1420" value="ter-1420" class="horario__input">
+                    <input type="checkbox" name="ter-1420" value="ter-1420" class="horario__input" v-model="posicao[11]">
                     <label class="horario__label" for="ter-1420">14:20</label><br>
 
-                    <input type="checkbox" name="ter-1620" value="ter-1620" class="horario__input">
+                    <input type="checkbox" name="ter-1620" value="ter-1620" class="horario__input" v-model="posicao[16]">
                     <label class="horario__label" for="ter-1620">16:20</label><br>
                 </div>
 
                 <div class="horario__dia">
                     <h4>Quarta</h4>
 
-                    <input type="checkbox" name="qua-0810" value="qua-0810" class="horario__input">
+                    <input type="checkbox" name="qua-0810" value="qua-0810" class="horario__input" v-model="posicao[2]">
                     <label class="horario__label" for="qua-0810">8:10</label><br>
                     
-                    <input type="checkbox" name="qua-1010" value="qua-1010" class="horario__input">
+                    <input type="checkbox" name="qua-1010" value="qua-1010" class="horario__input" v-model="posicao[7]">
                     <label class="horario__label" for="qua-1010">10:10</label><br>
 
-                    <input type="checkbox" name="qua-1420" value="qua-1420" class="horario__input">
+                    <input type="checkbox" name="qua-1420" value="qua-1420" class="horario__input" v-model="posicao[12]">
                     <label class="horario__label" for="qua-1420">14:20</label><br>
 
-                    <input type="checkbox" name="qua-1620" value="qua-1620" class="horario__input">
+                    <input type="checkbox" name="qua-1620" value="qua-1620" class="horario__input" v-model="posicao[17]">
                     <label class="horario__label" for="qua-1620">16:20</label><br>
                 </div>
 
                 <div class="horario__dia">
                     <h4>Quinta</h4>
 
-                    <input type="checkbox" name="qui-0810" value="qui-0810" class="horario__input">
+                    <input type="checkbox" name="qui-0810" value="qui-0810" class="horario__input" v-model="posicao[3]">
                     <label class="horario__label" for="qui-0810">8:10</label><br>
                     
-                    <input type="checkbox" name="qui-1010" value="qui-1010" class="horario__input">
+                    <input type="checkbox" name="qui-1010" value="qui-1010" class="horario__input" v-model="posicao[8]">
                     <label class="horario__label" for="qui-1010">10:10</label><br>
 
-                    <input type="checkbox" name="qui-1420" value="qui-1420" class="horario__input">
+                    <input type="checkbox" name="qui-1420" value="qui-1420" class="horario__input" v-model="posicao[13]">
                     <label class="horario__label" for="qui-1420">14:20</label><br>
 
-                    <input type="checkbox" name="qui-1620" value="qui-1620" class="horario__input">
+                    <input type="checkbox" name="qui-1620" value="qui-1620" class="horario__input" v-model="posicao[18]">
                     <label class="horario__label" for="qui-1620">16:20</label><br>
                 </div>
 
                 <div class="horario__dia">
                     <h4>Sexta</h4>
 
-                    <input type="checkbox" name="sex-0810" value="sex-0810" class="horario__input">
+                    <input type="checkbox" name="sex-0810" value="sex-0810" class="horario__input" v-model="posicao[4]">
                     <label class="horario__label" for="sex-0810">8:10</label><br>
                     
-                    <input type="checkbox" name="sex-1010" value="sex-1010" class="horario__input">
+                    <input type="checkbox" name="sex-1010" value="sex-1010" class="horario__input" v-model="posicao[9]">
                     <label class="horario__label" for="sex-1010">10:10</label><br>
 
-                    <input type="checkbox" name="sex-1420" value="sex-1420" class="horario__input">
+                    <input type="checkbox" name="sex-1420" value="sex-1420" class="horario__input" v-model="posicao[14]">
                     <label class="horario__label" for="sex-1420">14:20</label><br>
 
-                    <input type="checkbox" name="sex-1620" value="sex-1620" class="horario__input">
+                    <input type="checkbox" name="sex-1620" value="sex-1620" class="horario__input" v-model="posicao[19]">
                     <label class="horario__label" for="sex-1620">16:20</label><br>
                 </div>
             </div>
@@ -145,7 +145,14 @@ export default {
                 site: '',
                 link: '',
                 cor: '',
-            }
+            },
+            posicao: [
+                false, false, false, false, false, 
+                false, false, false, false, false, 
+                false, false, false, false, false, 
+                false, false, false, false, false, 
+            ],
+            organizador: JSON.parse(localStorage.getItem('organizador'))
         }
     },
     props: {
@@ -156,8 +163,14 @@ export default {
             let aux = this.disciplinas;
             aux.push(this.disciplina);
             localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas));
-            console.log(this.disciplinas);
+            for(let i=0; i<= this.posicao.length; i++) {
+                if(this.posicao[i] === true && this.organizador[i] === null) {
+                    this.organizador[i] = this.disciplinas.length-1;
+                }
+            }
+            localStorage.setItem('organizador', JSON.stringify(this.organizador));
             this.disciplina = {codigo: '', nome: '', professor: '', site: '', link: '', cor: '',}
+            this.posicao = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
         }
     },
 }

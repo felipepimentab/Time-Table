@@ -3,7 +3,7 @@
     <div class="container">
       <div class="wrap">
       <Lista v-if="disciplinas" :key="disciplinas" :disciplinas="disciplinas"/>
-      <Adicionar :disciplinas="disciplinas"/>
+      <Adicionar :key="disciplinas" :disciplinas="disciplinas"/>
       </div>
       <div class="botao"><button @click="apaga()">Apagar todas as disciplinas</button></div>
     </div>
