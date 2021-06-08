@@ -145,6 +145,7 @@ export default {
                 site: '',
                 link: '',
                 cor: '',
+                tarefas: [],
             },
             posicao: [
                 false, false, false, false, false, 
@@ -160,16 +161,23 @@ export default {
     },
     methods: {
         adiciona() {
-            let aux = this.disciplinas;
-            aux.push(this.disciplina);
-            localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas));
+            if (this.disciplinas) {
+                var dis = this.disciplinas;
+                var org = this.organizador;
+            } else {
+                dis = [];
+                org = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
+            }
+            dis.push(this.disciplina);
+            localStorage.setItem('disciplinas', JSON.stringify(dis));
+
             for(let i=0; i<= this.posicao.length; i++) {
-                if(this.posicao[i] === true && this.organizador[i] === null) {
-                    this.organizador[i] = this.disciplinas.length-1;
+                if(this.posicao[i] === true && org[i] === null) {
+                    org[i] = dis.length-1;
                 }
             }
-            localStorage.setItem('organizador', JSON.stringify(this.organizador));
-            this.disciplina = {codigo: '', nome: '', professor: '', site: '', link: '', cor: '',}
+            localStorage.setItem('organizador', JSON.stringify(org));
+            this.disciplina = {codigo: '', nome: '', professor: '', site: '', link: '', cor: '', tarefas: []}
             this.posicao = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
         }
     },

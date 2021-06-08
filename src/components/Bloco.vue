@@ -202,6 +202,7 @@ $carnation: #ffb1e5;
   padding: 5px;
   margin: 3px;
 
+  min-height: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
