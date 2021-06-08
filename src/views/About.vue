@@ -39,7 +39,7 @@ export default {
   width: calc(100% - 3rem);
   padding: 10px;
   margin-top: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   background: linear-gradient(
     to right bottom,
     rgba(0, 0, 0, 0.7),

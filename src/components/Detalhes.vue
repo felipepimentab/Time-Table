@@ -37,7 +37,7 @@ $cinza-claro: #ebebeb;
     rgba(0, 0, 0, 0.6)
     );
     backdrop-filter: blur(5px);
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

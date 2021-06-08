@@ -33,7 +33,7 @@ export default {
     Twitter,
   },
   methods: {
-    reset() {
+    reset() { // Método apenas para testes
       localStorage.setItem('organizador', JSON.stringify([
            0, null,    1,    1, null,
         null,    2,    0,    3,    3,
@@ -73,7 +73,7 @@ export default {
           "professor":"João Paulo Pereira do Carmo",
           "site":"Não tem site",
           "link":"#",
-          "tarefas":[" P1 - 11/06"," P2 - 23/07"],
+          "tarefas":[" P1 - 25/06"," P2 - 23/07"],
           "cor":"spring"
         },
         {
@@ -123,8 +123,8 @@ export default {
 html {
   font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
   font-size: 14px;
-//  -webkit-font-smoothing: antialiased;
-//  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   scroll-behavior: smooth;
   overflow: overlay;

@@ -199,7 +199,7 @@ $cinza-claro: #ebebeb;
     width: auto;
     padding: 1rem;
     margin: 0;
-    border-radius: 10px;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;

@@ -14,7 +14,7 @@ export default {
 
 <style lang="scss" scoped>
 .sem-disciplina {
-    border-radius: 10px;
+    border-radius: 15px;
     background: linear-gradient(
         to right bottom,
         rgba(0, 0, 0, 0.7),
@@ -30,6 +30,9 @@ export default {
     h2 {
         font-size: 2rem;
         color: white;
+    }
+    h3 {
+        font-family: 'SF Pro';
     }
 }
 </style>

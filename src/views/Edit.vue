@@ -51,7 +51,7 @@ $cinza-claro: #ebebeb;
   width: auto;
   padding: 10px;
   margin-top: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
   background: linear-gradient(
     to right bottom,
     rgba(0, 0, 0, 0.7),
