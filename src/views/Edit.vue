@@ -76,7 +76,7 @@ $cinza-claro: #ebebeb;
   top: 0;
   left: 0;
   h1 {
-    font-family: 'San Francisco';
+    font-family: 'SF Rounded';
     color: $cinza-claro; 
     align-self: center;
     margin: 1rem;
@@ -105,7 +105,7 @@ button {
   align-self: center;
   border: none;
   border-radius: 5px;
-  font-family: 'San Francisco';
+  font-family: 'SF Rounded';
   font-size: 1.2rem;
   transition: all 200ms linear;
   background-color: rgba(255, 100, 100, 0.8);

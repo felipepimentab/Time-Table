@@ -210,7 +210,7 @@ $carnation: #ffb1e5;
   border-radius: 5px;
   transition: background-color 200ms linear;
   h3 {
-    font-family: 'San Francisco';
+    font-family: 'SF Rounded';
     font-weight: bolder;
     margin: 0;
     padding: 0;

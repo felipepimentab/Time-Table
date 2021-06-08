@@ -25,7 +25,7 @@ export default {
     margin: 4rem;
     padding: 2rem;
     color: #ebebeb;
-    font-family: 'San Francisco';
+    font-family: 'SF Rounded';
     text-decoration: none;
     h2 {
         font-size: 2rem;

@@ -46,7 +46,7 @@ $cinza-claro: #ebebeb;
         margin: 0.4rem;
     }
     h2, h3, li {
-        font-family: 'San Francisco';
+        font-family: 'SF Rounded';
         color: $cinza-claro;
     }
     h4, a, p {

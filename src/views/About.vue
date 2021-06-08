@@ -47,7 +47,7 @@ export default {
   );
   backdrop-filter: blur(5px);
   h1 {
-    font-family: 'San Francisco';
+    font-family: 'SF Rounded';
   }
   h1, h3, p {
     margin: 1rem;

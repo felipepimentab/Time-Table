@@ -111,7 +111,7 @@ export default {
 
 <style lang="scss">
 @font-face {
-  font-family: 'San Francisco';
+  font-family: 'SF Rounded';
   src: url(../src/assets/SF-Pro-Rounded-Bold.ttf);
 }
 @font-face {
@@ -123,8 +123,8 @@ export default {
 html {
   font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
   font-size: 14px;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+//  -webkit-font-smoothing: antialiased;
+//  -moz-osx-font-smoothing: grayscale;
   text-align: center;
   scroll-behavior: smooth;
   overflow: overlay;
@@ -137,7 +137,7 @@ html {
   }
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/dubai.jpg);
+  background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/color-lines.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -176,7 +176,7 @@ body {
   }
   a {
     font-size: 1.3rem;
-    font-family: 'San Francisco';
+    font-family: 'SF Rounded';
     padding: 1rem;
     margin: 0;
     color: rgba($color: white, $alpha: 0.5);

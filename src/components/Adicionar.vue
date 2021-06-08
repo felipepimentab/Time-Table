@@ -184,7 +184,7 @@ $cinza-claro: #ebebeb;
     align-items: flex-start;
     text-align: start;
     color: $cinza-claro;
-    font-family: 'San Francisco';
+    font-family: 'SF Rounded';
     h2, h4 {
         margin: 0 0 1rem 0;
     }
@@ -214,7 +214,7 @@ $cinza-claro: #ebebeb;
         border-radius: 5px;
         margin: 0.5rem 0 1rem 0;
         padding: 0.25rem;
-        font-family: 'San Francisco';
+        font-family: 'SF Rounded';
     }
     form {
         width: 100%;
@@ -225,7 +225,7 @@ $cinza-claro: #ebebeb;
         padding: 0.3rem;
         
         border-radius: 5px;
-        font-family: 'San Francisco';
+        font-family: 'SF Pro';
         background-color: rgba(255, 255, 255, 0.8);
     }
     .infos {

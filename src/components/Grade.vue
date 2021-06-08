@@ -76,7 +76,7 @@ export default {
 }
 
 .dia, .horario {
-  font-family: 'San Francisco';
+  font-family: 'SF Rounded';
   font-size: 12px;
   color: #ebebeb;
   display: flex;

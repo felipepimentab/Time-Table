@@ -63,7 +63,7 @@ h2 {
 }
 
 .titulo {
-  font-family: 'San Francisco';
+  font-family: 'SF Rounded';
   color: $cinza-claro; 
   align-self: center;
   margin: 1rem;
