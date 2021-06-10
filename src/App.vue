@@ -112,11 +112,11 @@ export default {
 <style lang="scss">
 @font-face {
   font-family: 'SF Rounded';
-  src: url(../src/assets/SF-Pro-Rounded-Bold.ttf);
+  src: url(./assets/SF-Pro-Rounded-Bold.ttf);
 }
 @font-face {
   font-family: 'SF Pro';
-  src: url(../src/assets/SF-Pro-Regular.ttf);
+  src: url(./assets/SF-Pro-Regular.ttf);
 }
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -137,7 +137,7 @@ html {
   }
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url(D:/Felipe/Documentos/Vue-TimeTable/time-table/src/assets/color-lines.jpg);
+  background-image: url(./assets/color-lines.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
