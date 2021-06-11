@@ -134,6 +134,8 @@
 </template>
 
 <script>
+import Disciplina from '../domain/disciplina/disciplina.js'
+
 export default {
     name: 'Adicionar',
     data: function() {
@@ -168,12 +170,21 @@ export default {
                 dis = [];
                 org = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
             }
+            this.disciplina = new Disciplina(
+                this.disciplina.codigo,
+                this.disciplina.nome,
+                this.disciplina.professor,
+                this.disciplina.site,
+                this.disciplina.link,
+                this.disciplina.cor
+            );
             dis.push(this.disciplina);
             localStorage.setItem('disciplinas', JSON.stringify(dis));
 
             for(let i=0; i<= this.posicao.length; i++) {
                 if(this.posicao[i] === true && org[i] === null) {
-                    org[i] = dis.length-1;
+                    //org[i] = dis.length-1;
+                    org[i] = this.disciplina.id;
                 }
             }
             localStorage.setItem('organizador', JSON.stringify(org));

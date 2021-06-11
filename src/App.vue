@@ -35,12 +35,13 @@ export default {
   methods: {
     reset() { // Método apenas para testes
       localStorage.setItem('organizador', JSON.stringify([
-           0, null,    1,    1, null,
-        null,    2,    0,    3,    3,
-           4,    5,    4,    5, null,
-           6, null, null, null, null]));
+      "a123",   null, "b123", "b123",   null,
+        null, "c123", "a123", "d123", "d123",
+      "e123", "f123", "e123", "f123",   null,
+      "g123",   null,   null,   null,   null]));
       localStorage.setItem('disciplinas', JSON.stringify([
         {
+          "id": "a123",
           "codigo":"SEL 0401",
           "nome":"Eletrônica de Potência",
           "professor":"José Roberto Boffino de Almeida",
@@ -50,6 +51,7 @@ export default {
           "cor":"bubblegum"
         },
         {
+          "id": "b123",
           "codigo":"SEL 0310",
           "nome":"Ondas Eletromagnéticas",
           "professor":"Leonardo André Ambrósio",
@@ -59,6 +61,7 @@ export default {
           "cor":"turquoise"
         },
         {
+          "id": "c123",
           "codigo":"SEL 0317",
           "nome":"Laboratório de Circuitos Eletrônicos II",
           "professor":"Marlon Rodrigues Garcia",
@@ -68,6 +71,7 @@ export default {
           "cor":"blueberry"
         },
         {
+          "id": "d123",
           "codigo":"SEL 0315",
           "nome":"Circuitos Eletrônicos III",
           "professor":"João Paulo Pereira do Carmo",
@@ -77,6 +81,7 @@ export default {
           "cor":"spring"
         },
         {
+          "id": "e123",
           "codigo":"SME 0320",
           "nome":"Estatística I",
           "professor":"Reiko Aoki",
@@ -86,6 +91,7 @@ export default {
           "cor":"sea-foam"
         },
         {
+          "id": "f123",
           "codigo":"SMA 0356",
           "nome":"Cálculo IV",
           "professor":"Sergio Henrique Monari Soares",
@@ -95,6 +101,7 @@ export default {
           "cor":"salmon"
         },
         {
+          "id": "g123",
           "codigo":"SEP 0587",
           "nome":"Princípios de Economia",
           "professor":"Humberto Filipe de Andrade Januário Bettini",

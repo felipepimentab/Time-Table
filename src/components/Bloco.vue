@@ -9,13 +9,23 @@
 export default {
   name: 'Bloco',
   props: {
-    disciplina: Object,
-    index: Number,
+    disciplinas: Object,
+    index: String,
+  },
+  data() {
+    return {
+      disciplina: {}
+    }
   },
   methods: {
     detalhe(index) {
       if (index!=null) {this.$emit('detalhe-index', index)}
     }
+  },
+  created() {
+    this.disciplinas.forEach(element => {
+      element.id === this.index ? this.disciplina = element : null
+    });
   },
   emits: ['detalhe-index'],
 }
