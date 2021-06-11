@@ -1,29 +1,19 @@
-import Vuex from 'vuex'
-import Vue from 'vue'
+import { createStore } from 'vuex'
 
-Vue.use(Vuex)
-
-const state = {
-    selecionado: null,
-}
-
-const mutations = {
-    SELECIONAR_DETALHES(state, index) {
-        state.selecionado = index
+const store = createStore({
+    state() {
+        return{
+            selecionado: null
+        }
+    },
+    mutations: {
+        SELECIONAR_DETALHES(state, value) {
+            state.selecionado = value
+        }
+    },
+    getters: {
+        disciplinaSelecionada: state => state.selecionado
     }
-}
-
-const actions = {
-
-}
-
-const getters = {
-    disciplinaSelecionada: state => state.selecionado
-}
-
-export default new Vuex.Store({
-    state,
-    mutations,
-    actions,
-    getters
 })
+
+export default store

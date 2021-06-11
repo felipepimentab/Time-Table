@@ -206,6 +206,7 @@ body {
     font-weight: bold;
     padding: 1rem;
     margin: 0;
+    cursor: default;
   }
   .links {
     display: flex;

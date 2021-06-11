@@ -1,5 +1,5 @@
 <template>
-    <div v-if="disciplina" id="detalhes">
+    <div v-if="disciplina != null" id="detalhes">
         <h2>{{ disciplina.codigo }}</h2>
         <h3>{{ disciplina.nome }}</h3>
         <h4>Professor: {{ disciplina.professor }}</h4>
@@ -15,8 +15,13 @@
 <script>
 export default {
     name: 'Detalhes',
-    props: {
-        disciplina: Object,
+    computed: {
+        disciplina() {
+            return this.$store.state.selecionado
+        }
+    },
+    created() {
+        console.log(this.disciplina)
     }
 }
 </script>

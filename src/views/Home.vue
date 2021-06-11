@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="home">
-    <Grade @click="teste()" v-if="this.disciplinas" :key="this.disciplinas" @detalhe-id="detalheId" :disciplinas="disciplinas" :org="organizador"/>
-    <Detalhes :disciplina="disciplinas ? disciplinas[i] : null"/>
+    <Grade v-if="this.disciplinas" :key="this.disciplinas" :disciplinas="disciplinas" :org="organizador"/>
+    <Detalhes />
     <SemDisciplina v-if="!this.disciplinas" :key="this.disciplinas"/>
   </div>
 </template>
@@ -11,6 +11,7 @@
 import Grade from '@/components/Grade.vue';
 import Detalhes from '@/components/Detalhes.vue';
 import SemDisciplina from '@/components/SemDisciplina.vue';
+import { mapState } from 'vuex';
 
 export default {
   name: 'Home',
@@ -21,19 +22,13 @@ export default {
   },
   data: function() {
     return {
-      i: null,
       organizador: JSON.parse(localStorage.getItem('organizador')),
       disciplinas: JSON.parse(localStorage.getItem('disciplinas')),
     }
   },
-    methods: {
-      detalheId(index) {
-      this.i = index;
-      },
-      teste() {
-        console.log(this.disciplinas);
-      }
-  },
+  computed: {
+    ...mapState(["selecionado"])
+  }
 }
 </script>
 

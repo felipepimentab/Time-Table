@@ -8,32 +8,32 @@
     <div class="dia"><h3>Sexta</h3></div>
 
     <div class="horario"><h3>8:10</h3></div>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[0]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[1]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[2]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[3]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[4]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[0]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[1]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[2]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[3]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[4]"/>
 
     <div class="horario"><h3>10:10</h3></div>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[5]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[6]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[7]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[8]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[9]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[5]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[6]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[7]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[8]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[9]"/>
 
     <div class="horario"><h3>14:20</h3></div>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[11]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[12]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[10]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[13]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[14]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[11]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[12]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[10]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[13]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[14]"/>
 
     <div class="horario"><h3>16:20</h3></div>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[15]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[16]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[17]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[18]"/>
-    <Bloco @detalhe-index="detalhe" :disciplinas="disciplinas" :index="org[19]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[15]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[16]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[17]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[18]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[19]"/>
   </div>
 </template>
 
@@ -48,11 +48,6 @@ export default {
   },
   components: {
     Bloco
-  },
-  methods: {
-    detalhe(index) {
-      this.$emit('detalhe-id', index)
-    },
   },
   emits: ['detalhe-id'],
 }
@@ -82,6 +77,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: default;
   h3 {
     margin: 0;
     padding: 0;

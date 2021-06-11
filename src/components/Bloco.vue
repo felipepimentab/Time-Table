@@ -19,15 +19,17 @@ export default {
   },
   methods: {
     detalhe(index) {
-      if (index!=null) {this.$emit('detalhe-index', index)}
+      if (index!=null) {
+        this.$store.commit('SELECIONAR_DETALHES', this.disciplina)
+        console.log(this.$store.getters.disciplinaSelecionada)
+      }
     }
   },
   created() {
     this.disciplinas.forEach(element => {
       element.id === this.index ? this.disciplina = element : null
     });
-  },
-  emits: ['detalhe-index'],
+  }
 }
 </script>
 
@@ -211,6 +213,7 @@ $carnation: #ffb1e5;
 #bloco {
   padding: 5px;
   margin: 3px;
+  
 
   min-height: 50px;
   display: flex;
@@ -225,12 +228,14 @@ $carnation: #ffb1e5;
     font-weight: bolder;
     margin: 0;
     padding: 0;
+    cursor: default;
   }
   h4 {
     font-weight: bold;
     display: none;
     margin: 0;
     padding: 0;
+    cursor: default;
   }
 }
 
