@@ -63,7 +63,7 @@ h2 {
 }
 
 .titulo {
-  font-family: 'SF Rounded';
+  font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
   color: $cinza-claro; 
   align-self: center;
   margin: 1rem;

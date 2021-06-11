@@ -25,7 +25,7 @@ export default {
     margin: 4rem;
     padding: 2rem;
     color: #ebebeb;
-    font-family: 'SF Rounded';
+    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     text-decoration: none;
     h2 {
         font-size: 2rem;

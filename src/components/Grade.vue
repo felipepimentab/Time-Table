@@ -76,7 +76,7 @@ export default {
 }
 
 .dia, .horario {
-  font-family: 'SF Rounded';
+  font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
   font-size: 12px;
   color: #ebebeb;
   display: flex;

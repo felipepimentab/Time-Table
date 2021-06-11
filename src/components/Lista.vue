@@ -43,11 +43,11 @@ $cinza-claro: #ebebeb;
         padding: 0 0 0 20px;
     }
     h3 {
-        font-family: 'SF Rounded';
+        font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
         margin: 0.3rem 0 0.3rem 0;
     }
     h4 {
-        font-family: 'SF Pro';
+        font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
         margin: 0.3rem 0 0.3rem 0;
     }
     h2 {

@@ -183,7 +183,7 @@ body {
   }
   a {
     font-size: 1.3rem;
-    font-family: 'SF Rounded';
+    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     padding: 1rem;
     margin: 0;
     color: rgba($color: white, $alpha: 0.5);

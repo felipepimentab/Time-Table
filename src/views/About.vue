@@ -47,7 +47,7 @@ export default {
   );
   backdrop-filter: blur(5px);
   h1 {
-    font-family: 'SF Rounded';
+    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
   }
   h1, h3, p {
     margin: 1rem;

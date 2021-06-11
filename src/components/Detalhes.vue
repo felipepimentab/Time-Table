@@ -46,7 +46,7 @@ $cinza-claro: #ebebeb;
         margin: 0.4rem;
     }
     h2, h3, li {
-        font-family: 'SF Rounded';
+        font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
         color: $cinza-claro;
     }
     h4, a, p {

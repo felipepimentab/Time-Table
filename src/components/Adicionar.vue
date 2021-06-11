@@ -216,7 +216,7 @@ $cinza-claro: #ebebeb;
     align-items: flex-start;
     text-align: start;
     color: $cinza-claro;
-    font-family: 'SF Rounded';
+    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     h2, h4 {
         margin: 0 0 1rem 0;
     }
@@ -246,7 +246,7 @@ $cinza-claro: #ebebeb;
         border-radius: 5px;
         margin: 0.5rem 0 1rem 0;
         padding: 0.25rem;
-        font-family: 'SF Rounded';
+        font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     }
     form {
         width: 100%;

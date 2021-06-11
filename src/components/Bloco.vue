@@ -221,7 +221,7 @@ $carnation: #ffb1e5;
   border-radius: 5px;
   transition: background-color 200ms linear;
   h3 {
-    font-family: 'SF Rounded';
+    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     font-weight: bolder;
     margin: 0;
     padding: 0;
