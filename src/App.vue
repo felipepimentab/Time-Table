@@ -14,6 +14,7 @@
       <a href="https://twitter.com/felipepimentab"><Twitter/></a>
       <a href="https://github.com/felipepimentab/Time-Table"><GitHub/></a>
       <a href="https://www.linkedin.com/in/felipe-pimenta-4b7a58160/"><LinkedIn/></a>
+      <a href="https://vercel.com/"><Vercel/></a>
     </div>
   </div>
 </template>
@@ -23,7 +24,7 @@ import GitHub from './components/icons/github.vue';
 import Instagram from './components/icons/instagram.vue';
 import LinkedIn from './components/icons/linkedin.vue';
 import Twitter from './components/icons/twitter.vue';
-
+import Vercel from './components/icons/vercel.vue'
 
 export default {
   components: {
@@ -31,6 +32,7 @@ export default {
     Instagram,
     LinkedIn,
     Twitter,
+    Vercel,
   },
   methods: {
     reset() { // Método apenas para testes
@@ -144,7 +146,7 @@ html {
   }
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url(./assets/color-lines.jpg);
+  background-image: url(https://i.pinimg.com/originals/5d/ab/4d/5dab4d5e50156cb929c1b1946085bdde.jpg);
   background-position: 0 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
