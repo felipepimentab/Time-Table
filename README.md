@@ -1,4 +1,7 @@
 # Vue Time-Table
+
+#### Link para a Beta: https://time-table-one.vercel.app
+
 ## Projeto pessoal com fins de aprendizado no *framework* **Vue.js**.
 Trata-se da recriação de um projeto pessoal já existente, chamado **Grade Horária**:
 >"O projeto consiste numa página interativa que contém a minha grade horária da faculdade durante o semestre 2021/1. Cada disciplina, ao ser clicada, apresenta informações a respeito de si mesma, como o nome do(a) professor(a), o link para a página da disciplina e uma lista dos métodos de avaliação escolhidos pelo(a) professor(a). O intuito desta aplicação é ajudar na organização com as matérias da faculdade durante o período de EAD, agrupando as informações mais relevantes a respeito de cada disciplina em uma única página."

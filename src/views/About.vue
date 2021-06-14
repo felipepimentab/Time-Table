@@ -13,23 +13,20 @@
           <div class="passo-a-passo">
             <ul class="passo-a-passo__ios">
               <h4>iOS:</h4>
-              <li><p>Abrir a Grade Horária no Safari.</p></li>
-              <li><p>Clicar no botão de compartilhar, na barra inferior do navegador.</p></li>
-              <li><p>Selecionar a opção "Adicionar à tela de íncio".</p></li>
+              <li><p>Abra a Grade Horária no Safari.</p></li>
+              <li><p>Clique no botão de compartilhar, na barra inferior do navegador.</p></li>
+              <li><p>Selecione a opção "Adicionar à tela de íncio".</p></li>
             </ul>
             <ul class="passo-a-passo__android">
               <h4>Android</h4>
-              <li>
-                <p>Passo 1</p>
-              </li>
-              <li>
-                <p>Passo 2</p>
-              </li>
-              <li>
-                <p>Passo 3</p>
-              </li>
+              <li><p>Abra a Grade Horária no Chrome.</p></li>
+              <li><p>Clique no botão de menu.</p></li>
+              <li><p>Selecione a opção "Adicionar atalho para a página".</p></li>
             </ul>
           </div>
+          <h3>Considerações</h3>
+          <p>Esta aplicação ainda está em fase de desenvolvimento (Beta) e, por isso, pode apresentar eventuais erros em certas funcionalidades. Sinta-se encorajado a informar qualquer bug ou oferecer sugestões entrando em contato comigo em qualquer uma das minhas redes sociais listadas abaixo.</p>
+          <p>Esta é uma aplicação Open Source hospedada no portal Vercel. Seu repositório está disponível na minha página do GitHub, listada abaixo.</p>
         </section>
     </div>
 </template>
