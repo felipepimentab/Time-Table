@@ -14,22 +14,16 @@ export default {
   },
   data() {
     return {
-      disciplina: {}
+      disciplina: this.disciplinas.find(element => element.id == this.index),
     }
   },
   methods: {
     detalhe(index) {
       if (index!=null) {
-        this.$store.commit('SELECIONAR_DETALHES', this.disciplina)
-        console.log(this.$store.getters.disciplinaSelecionada)
+        this.$store.commit('SELECIONAR_DETALHES', this.disciplina.id)
       }
     }
   },
-  created() {
-    this.disciplinas.forEach(element => {
-      element.id === this.index ? this.disciplina = element : null
-    });
-  }
 }
 </script>
 

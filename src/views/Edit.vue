@@ -65,7 +65,7 @@ $cinza-claro: #ebebeb;
 
 .edit {
   width: calc(100% - 3rem);
-  max-width: 500px;
+  max-width: 36.4rem;
   height: auto;
   padding: 0;
   margin: 0;

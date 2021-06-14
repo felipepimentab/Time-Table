@@ -1,7 +1,7 @@
 <template>
     <div id="adicionar">
         <h2>Adicionar disciplina</h2>
-        <form @submit.prevent="adiciona()">
+        <form @submit="adiciona()" action="/#/edit">
             <label for="codigo">Código da disciplina:</label><br>
             <input type="text" name="codigo" class="infos" v-model="disciplina.codigo"><br>   
 

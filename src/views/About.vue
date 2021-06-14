@@ -1,14 +1,35 @@
 <template>
     <div id="about" class="about">
         <section class="container">
-            <h1>Sobre</h1>
-            <h3>Projeto pessoal com fins de aprendizado no framework Vue.js</h3>
-            <p>Trata-se da recriação de um projeto pessoal já existente, chamado Grade Horária:</p>
-            <p class="quote">"O projeto consiste numa página interativa que contém a minha grade horária da faculdade durante o semestre 2021/1. Cada disciplina, ao ser clicada, apresenta informações a respeito de si mesma, como o nome do(a) professor(a), o link para a página da disciplina e uma lista dos métodos de avaliação escolhidos pelo(a) professor(a). O intuito desta aplicação é ajudar na organização com as matérias da faculdade durante o período de EAD, agrupando as informações mais relevantes a respeito de cada disciplina em uma única página."</p>
-            <p>Esta versão da aplicação está sendo desenvolvida nos moldes de uma single page application do Vue. A primeira página, Home, apresenta as disciplinas em forma de grade horária, onde cada bloco de disciplina é um botão que, ao ser clicado, expande um seção abaixo contendo as principais informações a respeito da disciplina: código, nome, nome do(a) professor(a), link para a página da disciplina e uma lista dos métodos de avaliação. A página foi estruturada usando os components do Vue, de forma que sua estrutura pode ser facilmente escalável e alterada dinamicamente.</p>
-            <p>A segunda página, Editor (ainda não completamente implementada), permite ao usuário configurar sua aplicação, inserindo os dados de suas disciplinas e montando sua grade horária. Os dados a respeito das disciplinas são armazenados na forma de um vetor de objetos JavaScript, onde cada índice do vetor corresponde a uma disciplina. Além disso, há um vetor chamado "organizador", que é responsável por posicionar corretamente cada disciplina em sua respectiva posição na grade horária, não limitada a uma posição por disciplina.</p>
-            <p>Todos os dados serão armazenados no Local Storage do navegador, para que a aplicação possa ser executada sem conexão com a internet.</p>
-
+          <h1>Sobre</h1>
+          <h3>O que é</h3>
+          <p>Grade Horária é um projeto pessoal desenvolvido por Felipe Pimenta com fins de aprendizado no framework Vue.js. O projeto segue os padrões de uma Single Page Application (SPA) e visa também, futuramente, ser implementado como um Progressive Web App (PWA).</p>
+          <h3>Para que serve</h3>
+          <p>A ideia da aplicação surgiu da percepção de uma dificuldade em se manter a organização com relação às disciplinas da faculdade durante os semestres de ensino à distância. A necessidade de se adaptar rapidamente ao ensino remoto trouxe inconsistências nos métodos adotados pelos docentes tanto com relação às formas de avaliação quanto com a maneira de se disponibilizar o conteúdo e realizar os encontros virtuais. Esta aplicação visa facilitar e simplificar a organização do aluno com suas disciplinas da faculdade, possibilitando o agrupamento de informações referentes às diversas disciplinas em uma única página.</p>
+          <h3>Como usar</h3>
+          <p>Para usar o aplicativo, o usuário deve adicionar suas disciplinas à sua grade acessando a aba <router-link to="/edit">Editar</router-link>. As disciplinas devem conter seu código, seu nome, o nome do professor responsável, seu(s) horário(s) e uma cor para ser apresentada na grade, podendo conter também um site associado à disciplina.</p>
+          <p>Uma vez inserida a disciplina na grade, o usuário pode visualizá-la na aba <router-link to=”/”>Grade Horária</router-link>, na devida posição associada ao horário da disciplina. Ao clicar na disciplina, é exibida uma seção com as informações inseridas a respeito da mesma. Nesta seção é também possível adicionar tarefas à disciplina, como os métodos de avaliação escolhidos pelo professor, por exemplo.</p>
+          <p>Recomenda-se que esta aba seja adicionada à barra de favoritos do navegador, para fácil acesso. No celular, o usuário pode também adicionar esta aba aos favoritos ou criar um atalho para ela em sua tela de ínicio. Para isso, basta seguir o passo-a-passo:</p>
+          <div class="passo-a-passo">
+            <ul class="passo-a-passo__ios">
+              <h4>iOS:</h4>
+              <li><p>Abrir a Grade Horária no Safari.</p></li>
+              <li><p>Clicar no botão de compartilhar, na barra inferior do navegador.</p></li>
+              <li><p>Selecionar a opção "Adicionar à tela de íncio".</p></li>
+            </ul>
+            <ul class="passo-a-passo__android">
+              <h4>Android</h4>
+              <li>
+                <p>Passo 1</p>
+              </li>
+              <li>
+                <p>Passo 2</p>
+              </li>
+              <li>
+                <p>Passo 3</p>
+              </li>
+            </ul>
+          </div>
         </section>
     </div>
 </template>
@@ -21,18 +42,21 @@ export default {
 
 <style lang="scss" scoped>
 .about {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    padding: 0;
-    margin: 0;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    top: 0;
-    left: 0;
-    font-size: 16px;
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 0;
+  left: 0;
+  font-size: 16px;
+  .quote {
+    font-style: italic;
+  }
 }
 
 .container  {
@@ -46,20 +70,46 @@ export default {
     rgba(0, 0, 0, 0.6)
   );
   backdrop-filter: blur(5px);
-  h1 {
+  h1, h2, h3, p {
     font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
-  }
-  h1, h3, p {
     margin: 1rem;
     color: #ebebeb;
     text-align: start;
     text-justify: distribute;
+  }
+  h4 {
+    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+    color: #ebebeb;
+    margin-top: 0;
+  }
+  p, a {
+    font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+  }
+  a {
+    color: #ebebeb;
+  }
+  ul {
+    margin: 1rem;
+    padding-left: 1rem;
+  }
+  li {
+    margin: 0;
+    padding: 0;
+    color: #ebebeb;
+    p {
+      margin-left: 0;
+    }
   }
 }
 
 @media screen and (min-width: 700px) {
   .about {
     max-width: 700px;
+  }
+  .passo-a-passo {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
   }
 }
 </style>

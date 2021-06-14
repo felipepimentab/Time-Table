@@ -16,7 +16,7 @@
 export default {
     name: 'Lista',
     props: {
-        disciplinas: Array,
+        disciplinas: Object,
     }
 }
 </script>
@@ -55,6 +55,12 @@ $cinza-claro: #ebebeb;
     }
     h4 {
         color: $cinza-pastel;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    #lista {
+        min-width: 25rem;
     }
 }
 </style>
