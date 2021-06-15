@@ -1,7 +1,7 @@
 <template>
   <div id="home" class="home">
     <Grade v-if="this.disciplinas" :key="this.disciplinas" :disciplinas="disciplinas" :org="organizador"/>
-    <Detalhes :disciplinas="disciplinas"/>
+    <Detalhes v-if="this.disciplinas" :disciplinas="disciplinas"/>
     <SemDisciplina v-if="!this.disciplinas" :key="this.disciplinas"/>
   </div>
 </template>
