@@ -34,7 +34,7 @@ export default {
     Twitter,
     Vercel,
   },
-  methods: {
+  /* methods: {
     reset() { // Método apenas para testes
       localStorage.setItem('organizador', JSON.stringify([
       "a123",   null, "b123", "b123",   null,
@@ -114,7 +114,7 @@ export default {
         },
       ]));
     }
-  }
+  } */
 }
 </script>
 
