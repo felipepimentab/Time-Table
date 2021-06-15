@@ -18,7 +18,7 @@
               <li><p>Selecione a opção "Adicionar à tela de íncio".</p></li>
             </ul>
             <ul class="passo-a-passo__android">
-              <h4>Android</h4>
+              <h4>Android:</h4>
               <li><p>Abra a Grade Horária no Chrome.</p></li>
               <li><p>Clique no botão de menu.</p></li>
               <li><p>Selecione a opção "Adicionar atalho para a página".</p></li>

@@ -22,9 +22,9 @@
     <Bloco :disciplinas="disciplinas" :index="org[9]"/>
 
     <div class="horario"><h3>14:20</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[10]"/>
     <Bloco :disciplinas="disciplinas" :index="org[11]"/>
     <Bloco :disciplinas="disciplinas" :index="org[12]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[10]"/>
     <Bloco :disciplinas="disciplinas" :index="org[13]"/>
     <Bloco :disciplinas="disciplinas" :index="org[14]"/>
 
