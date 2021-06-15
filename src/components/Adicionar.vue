@@ -3,19 +3,20 @@
         <h2>Adicionar disciplina</h2>
         <form @submit="adiciona()" action="/#/edit">
             <label for="codigo">Código da disciplina:</label><br>
-            <input type="text" name="codigo" class="infos" v-model="disciplina.codigo"><br>   
+            <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" required pattern="^([A-Z]{3} [0-9]{4})$" placeholder="ABC 1234" aria-placeholder="BCD 4567"><br>   
 
-            <label for="nome">Nome da disciplina</label><br>
-            <input type="text" name="nome" class="infos" v-model="disciplina.nome"><br>
+            <label for="nome">Nome da disciplina:</label><br>
+            <input type="text" name="nome" class="infos" v-model="disciplina.nome" required placeholder="Disciplina"><br>
 
-            <label for="professor">Professor responsável:</label><br>
-            <input type="text" name="professor" class="infos" v-model="disciplina.professor"><br>
+            <label for="professor">Professor(a) responsável:</label><br>
+            <input type="text" name="professor" class="infos" v-model="disciplina.professor" required
+            placeholder="Nome do(a) professor(a)"><br>
 
             <label for="site">Site:</label><br>
-            <input type="text" name="site" class="infos" v-model="disciplina.site"><br>
+            <input type="text" name="site" class="infos" v-model="disciplina.site" placeholder="Nome do portal"><br>
 
             <label for="link">Link:</label><br>
-            <input type="url" name="link" class="infos" v-model="disciplina.link"><br>
+            <input type="url" name="link" class="infos" v-model="disciplina.link" placeholder="http://www.endereço.com.br"><br>
 
             <h3>Horário</h3>
 
@@ -104,7 +105,7 @@
 
 
             <label for="cor">Cor:</label><br>
-            <select name="cor" id="cor" class="drop-down" @input="disciplina.cor = $event.target.value" :value="disciplina.cor">
+            <select name="cor" id="cor" class="drop-down" @input="disciplina.cor = $event.target.value" :value="disciplina.cor" required>
                 <option value="lime">Lime</option>
                 <option value="spring">Spring</option>
                 <option value="sea-foam">Sea Foam</option>
