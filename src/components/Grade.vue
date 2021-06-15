@@ -7,33 +7,89 @@
     <div class="dia"><h3>Quinta</h3></div>
     <div class="dia"><h3>Sexta</h3></div>
 
-    <div class="horario"><h3>8:10</h3></div>
+    <div class="horario"><h3>7:00</h3></div>
     <Bloco :disciplinas="disciplinas" :index="org[0]"/>
     <Bloco :disciplinas="disciplinas" :index="org[1]"/>
     <Bloco :disciplinas="disciplinas" :index="org[2]"/>
     <Bloco :disciplinas="disciplinas" :index="org[3]"/>
     <Bloco :disciplinas="disciplinas" :index="org[4]"/>
 
-    <div class="horario"><h3>10:10</h3></div>
+    <div class="horario"><h3>8:00</h3></div>
     <Bloco :disciplinas="disciplinas" :index="org[5]"/>
     <Bloco :disciplinas="disciplinas" :index="org[6]"/>
     <Bloco :disciplinas="disciplinas" :index="org[7]"/>
     <Bloco :disciplinas="disciplinas" :index="org[8]"/>
     <Bloco :disciplinas="disciplinas" :index="org[9]"/>
 
-    <div class="horario"><h3>14:20</h3></div>
+    <div class="horario"><h3>9:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[10]"/>
     <Bloco :disciplinas="disciplinas" :index="org[11]"/>
     <Bloco :disciplinas="disciplinas" :index="org[12]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[10]"/>
     <Bloco :disciplinas="disciplinas" :index="org[13]"/>
     <Bloco :disciplinas="disciplinas" :index="org[14]"/>
 
-    <div class="horario"><h3>16:20</h3></div>
+    <div class="horario"><h3>10:00</h3></div>
     <Bloco :disciplinas="disciplinas" :index="org[15]"/>
     <Bloco :disciplinas="disciplinas" :index="org[16]"/>
     <Bloco :disciplinas="disciplinas" :index="org[17]"/>
     <Bloco :disciplinas="disciplinas" :index="org[18]"/>
     <Bloco :disciplinas="disciplinas" :index="org[19]"/>
+
+    <div class="horario"><h3>11:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[20]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[21]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[22]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[23]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[24]"/>
+
+    <div class="horario"><h3>12:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[25]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[26]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[27]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[28]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[29]"/>
+
+    <div class="horario"><h3>13:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[30]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[31]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[32]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[33]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[34]"/>
+
+    <div class="horario"><h3>14:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[35]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[36]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[37]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[38]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[39]"/>
+
+    <div class="horario"><h3>15:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[40]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[41]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[42]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[43]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[44]"/>
+
+    <div class="horario"><h3>16:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[45]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[46]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[47]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[48]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[49]"/>
+
+    <div class="horario"><h3>17:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[50]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[51]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[52]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[53]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[54]"/>
+
+    <div class="horario"><h3>18:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[55]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[56]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[57]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[58]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[59]"/>
   </div>
 </template>
 
@@ -66,7 +122,7 @@ export default {
   backdrop-filter: blur(5px);
   border-radius: 15px;
   display: grid;
-  grid-template-rows: 2rem auto auto auto auto;
+  grid-template-rows: 2rem auto auto auto auto auto auto auto auto auto auto auto auto;
   grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
 }
 

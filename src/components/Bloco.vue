@@ -205,11 +205,10 @@ $carnation: #ffb1e5;
 }
 
 #bloco {
-  padding: 5px;
+  padding: 0;
   margin: 3px;
   
-
-  min-height: 50px;
+  min-height: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -223,10 +222,11 @@ $carnation: #ffb1e5;
     margin: 0;
     padding: 0;
     cursor: default;
+    display: none;
   }
   h4 {
     font-weight: bold;
-    display: none;
+    display: block;
     margin: 0;
     padding: 0;
     cursor: default;
@@ -235,9 +235,8 @@ $carnation: #ffb1e5;
 
 @media screen and (min-width: 700px) {
   #bloco {
-    padding: 10px;
-    margin: 5px;
-    min-height: 75px;
+    padding: 5px;
+    margin: 3px;
     h4 {
       display: block;
     }
