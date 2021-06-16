@@ -18,7 +18,7 @@
               <li><p>Selecione a opção "Adicionar à tela de íncio".</p></li>
             </ul>
             <ul class="passo-a-passo__android">
-              <h4>Android</h4>
+              <h4>Android:</h4>
               <li><p>Abra a Grade Horária no Chrome.</p></li>
               <li><p>Clique no botão de menu.</p></li>
               <li><p>Selecione a opção "Adicionar atalho para a página".</p></li>
@@ -40,7 +40,6 @@ export default {
 <style lang="scss" scoped>
 .about {
   width: 100%;
-  max-width: 500px;
   height: auto;
   padding: 0;
   margin: 0;
@@ -57,19 +56,23 @@ export default {
 }
 
 .container  {
-  width: calc(100% - 3rem);
-  padding: 10px;
-  margin-top: 2rem;
-  border-radius: 15px;
+  width: calc(100% - 2rem);
+  max-width: 60rem;
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
   background: linear-gradient(
     to right bottom,
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.6)
   );
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(0.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   h1, h2, h3, p {
     font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
-    margin: 1rem;
+    margin: 0.5rem;
     color: #ebebeb;
     text-align: start;
     text-justify: distribute;
@@ -100,13 +103,14 @@ export default {
 }
 
 @media screen and (min-width: 700px) {
-  .about {
-    max-width: 700px;
-  }
   .passo-a-passo {
     display: grid;
     grid-template-rows: auto;
     grid-template-columns: 1fr 1fr;
+  }
+  .container {
+    width: calc(100% - 4rem);
+    margin-top: 2rem;
   }
 }
 </style>

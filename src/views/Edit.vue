@@ -1,8 +1,8 @@
 <template>
   <div id="edit" class="edit">
     <div class="container">
-      <div class="wrap">
-      <Lista v-if="disciplinas" :key="disciplinas" :disciplinas="disciplinas"/>
+      <div class="split">
+      <Lista :key="disciplinas" :disciplinas="disciplinas"/>
       <Adicionar :key="disciplinas" :disciplinas="disciplinas"/>
       </div>
       <div class="botao"><button @click="apaga()">Apagar todas as disciplinas</button></div>
@@ -47,25 +47,8 @@ $cinza-mais-escuro: #202020;
 $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
-.container  {
-  width: auto;
-  padding: 10px;
-  margin-top: 2rem;
-  border-radius: 15px;
-  background: linear-gradient(
-    to right bottom,
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.6)
-  );
-  backdrop-filter: blur(5px);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .edit {
-  width: calc(100% - 3rem);
-  max-width: 36.4rem;
+  width: 100%;
   height: auto;
   padding: 0;
   margin: 0;
@@ -83,11 +66,27 @@ $cinza-claro: #ebebeb;
   }
 }
 
-.wrap {
+.container  {
+  width: calc(100% - 2rem);
+  max-width: 60rem;
+  margin: 0.5rem 0 0 0;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  background: linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0.6)
+  );
+  backdrop-filter: blur(0.5rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.split {
   width: 100%;
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -115,17 +114,13 @@ button {
 }
 
 @media screen and (min-width: 700px) {
-  .edit {
-    width: auto;
+  .container {
+    width: calc(100% - 4rem);
+    margin-top: 2rem;
   }
-  .botao {
-    width: auto;
+  .split {
+    flex-direction: row;
   }
 }
 
-@media screen and (min-width: 1000px) {
-  .edit {
-    max-width: 1000px;
-  }
-}
 </style>

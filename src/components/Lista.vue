@@ -1,6 +1,7 @@
 <template>
-    <div id="lista">
+    <div :key="disciplinas" id="lista">
         <h2>Suas disciplinas</h2>
+        <span v-if="!disciplinas" class="sem-disiplinas">Você ainda não possui disciplinas</span>
         <ul>
             <li :key="disciplina.lista" v-for="disciplina in disciplinas">
                 <div class="info">
@@ -56,11 +57,9 @@ $cinza-claro: #ebebeb;
     h4 {
         color: $cinza-pastel;
     }
-}
-
-@media screen and (min-width: 1000px){
-    #lista {
-        min-width: 25rem;
+    span {
+        margin: 1rem;
     }
 }
+
 </style>

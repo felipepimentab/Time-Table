@@ -34,13 +34,13 @@ export default {
     Twitter,
     Vercel,
   },
-  /* methods: {
+  methods: {
     reset() { // Método apenas para testes
       localStorage.setItem('organizador', JSON.stringify([
       "a123",   null, "b123", "b123",   null,
         null, "c123", "a123", "d123", "d123",
       "e123", "f123", "e123", "f123",   null,
-      "g123",   null,   null,   null,   null]));
+      "g123",   null,   null,   null,  "g123"]));
       localStorage.setItem('disciplinas', JSON.stringify([
         {
           "id": "a123",
@@ -114,7 +114,7 @@ export default {
         },
       ]));
     }
-  } */
+  }
 }
 </script>
 
@@ -131,18 +131,18 @@ export default {
 
 html {
   font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   scroll-behavior: smooth;
   overflow: overlay;
   ::-webkit-scrollbar { //the scrollbar.
-    width: 10px;
+    width: 0.5rem;
   } 
   ::-webkit-scrollbar-thumb { //the draggable scrolling handle.
     background: rgba($color: white, $alpha: 0.3);
-    width: 10px;
+    width: 0.5rem;
   }
   min-width: 100vw;
   min-height: 100vh;
@@ -154,8 +154,8 @@ html {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
 }
@@ -222,9 +222,6 @@ body {
 }
 
 @media screen and (min-width: 350) {
-  .nav {
-  width: calc(100% - 2rem);
-  padding: 0 1rem 0 1rem;
-  }
+
 }
 </style>
