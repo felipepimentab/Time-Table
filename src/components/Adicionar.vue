@@ -3,7 +3,7 @@
         <h2>Adicionar disciplina</h2>
         <form @submit="adiciona()" action="/#/edit">
             <label for="codigo">Código da disciplina:</label><br>
-            <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" required pattern="^([A-Z]{3} [0-9]{4})$" placeholder="ABC 1234" aria-placeholder="BCD 4567"><br>
+            <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" maxlength="4" placeholder="ABCD" aria-placeholder="EFGH"><br>
 
             <label for="nome">Nome da disciplina:</label><br>
             <input type="text" name="nome" class="infos" v-model="disciplina.nome" required placeholder="Disciplina"><br>
