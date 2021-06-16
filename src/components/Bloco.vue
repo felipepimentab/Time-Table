@@ -244,7 +244,6 @@ $carnation: #ffb1e5;
 @media screen and (min-width: 700px) {
   #bloco {
     padding: 0.5rem;
-    min-height: 5rem;
     h4 {
       display: block;
     }
