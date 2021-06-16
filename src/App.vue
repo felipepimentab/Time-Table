@@ -35,7 +35,7 @@ export default {
     Vercel,
   },
   methods: {
-    reset() { // Método apenas para testes
+  /*  reset() { // Método apenas para testes
       localStorage.setItem('organizador', JSON.stringify([
       "a123",   null, "b123", "b123",   null,
         null, "c123", "a123", "d123", "d123",
@@ -113,7 +113,7 @@ export default {
           "cor":"banana"
         },
       ]));
-    }
+    }*/
   }
 }
 </script>
