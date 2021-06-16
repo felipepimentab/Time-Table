@@ -224,11 +224,10 @@ $carnation: #ffb1e5;
     margin: 0 0.1rem;
     padding: 0;
     cursor: default;
-    display: none;
   }
   h4 {
     font-weight: bold;
-    display: block;
+    display: none;
     margin: 0;
     padding: 0;
     cursor: default;
@@ -248,6 +247,9 @@ $carnation: #ffb1e5;
     min-height: 5rem;
     h4 {
       display: block;
+    }
+    h3 {
+      display: none;
     }
   }
 }

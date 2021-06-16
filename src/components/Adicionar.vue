@@ -2,7 +2,7 @@
     <div id="adicionar">
         <h2>Adicionar disciplina</h2>
         <form @submit="adiciona()" action="/#/edit">
-            <label for="codigo">Código da disciplina:</label><br>
+            <label for="codigo">Abreviação da disciplina:</label><br>
             <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" maxlength="4" placeholder="ABCD" aria-placeholder="EFGH"><br>
 
             <label for="nome">Nome da disciplina:</label><br>
