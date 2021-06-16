@@ -131,7 +131,7 @@ export default {
 
 html {
   font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
