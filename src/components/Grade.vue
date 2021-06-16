@@ -57,22 +57,25 @@ export default {
 <style scoped lang="scss">
 #grade {
   width: calc(100% - 2rem);
-  margin: 2rem 0 0 0;
+  max-width: 60rem;
+  margin: 0.5rem 0 0 0;
+  padding: 0.2rem 0.5rem 0.5rem 0.2rem;
   background: linear-gradient(
     to right bottom,
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.6)
   );
-  backdrop-filter: blur(5px);
-  border-radius: 15px;
+  backdrop-filter: blur(0.5rem);
+  border-radius: 1rem;
   display: grid;
-  grid-template-rows: 2rem auto auto auto auto;
-  grid-template-columns: 16.6% 16.6% 16.6% 16.6% 16.6% 16.6%;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-columns: 1.5rem 1fr 1fr 1fr 1fr 1fr;
 }
 
 .dia, .horario {
   font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
   font-size: 12px;
+  padding: 0.2rem;
   color: #ebebeb;
   display: flex;
   align-items: center;
@@ -83,14 +86,21 @@ export default {
     padding: 0;
   }
 }
+.horario {
+  transform: rotate(-90deg);
+}
 
 @media screen and (min-width: 700px) {
   #grade {
-    grid-template-columns: 6% 18.8% 18.8% 18.8% 18.8% 18.8%;
+    width: calc(100% - 4rem);
+    margin-top: 2rem;
+    grid-template-columns: 3rem 1fr 1fr 1fr 1fr 1fr;
   }
-}
-
-@media screen and (min-width: 1000px) {
-  
+  .dia {
+    padding: 0.5rem;
+  }
+  .horario {
+    transform: none;
+  }
 }
 </style>

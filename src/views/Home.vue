@@ -45,7 +45,6 @@ h2 {
 
 .home {
   width: 100%;
-  max-width: 500px;
   height: auto;
   padding: 0;
   margin: 0;
@@ -65,14 +64,6 @@ h2 {
 }
 
 @media screen and (min-width: 700px) {
-  .home {
-    max-width: 700px;
-  }
 }
 
-@media screen and (min-width: 1000px) {
-  .home {
-    max-width: 1000px;
-  }
-}
 </style>
