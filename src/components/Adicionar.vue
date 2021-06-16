@@ -3,7 +3,7 @@
         <h2>Adicionar disciplina</h2>
         <form @submit="adiciona()" action="/#/edit">
             <label for="codigo">Código da disciplina:</label><br>
-            <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" required pattern="^([A-Z]{3} [0-9]{4})$" placeholder="ABC 1234" aria-placeholder="BCD 4567"><br>   
+            <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" required pattern="^([A-Z]{3} [0-9]{4})$" placeholder="ABC 1234" aria-placeholder="BCD 4567"><br>
 
             <label for="nome">Nome da disciplina:</label><br>
             <input type="text" name="nome" class="infos" v-model="disciplina.nome" required placeholder="Disciplina"><br>
@@ -227,6 +227,7 @@ $cinza-claro: #ebebeb;
     .horario {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-evenly;
         .horario__dia {
         padding: 1rem;
         width: auto;
@@ -248,6 +249,7 @@ $cinza-claro: #ebebeb;
         margin: 0.5rem 0 1rem 0;
         padding: 0.25rem;
         font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+        font-size: 1rem;
     }
     form {
         width: 100%;
@@ -257,8 +259,9 @@ $cinza-claro: #ebebeb;
         margin: 0.5rem 0 1rem 0;
         padding: 0.3rem;
         
-        border-radius: 5px;
+        border-radius: 0.3rem;
         font-family: 'SF Pro';
+        font-size: 1rem;
         background-color: rgba(255, 255, 255, 0.8);
     }
     .infos {

@@ -2,7 +2,7 @@
     <div :key="disciplina" v-if="disciplina" id="detalhes">
         <h2>{{ disciplina.codigo }}</h2>
         <h3>{{ disciplina.nome }}</h3>
-        <h4>Professor: {{ disciplina.professor }}</h4>
+        <h4>Professor(a): {{ disciplina.professor }}</h4>
         <div v-if="disciplina.link!='#'" class="link">
             <p>Site:</p><a :href="disciplina.link">{{ disciplina.site }}</a>
         </div>
@@ -56,7 +56,11 @@ export default {
     },
     computed: {
         disciplina() {
-            return this.disciplinas.find(element => element.id == this.$store.state.selecionado)
+            if (this.disciplinas) {
+                return this.disciplinas.find(element => element.id == this.$store.state.selecionado)
+            } else {
+                return null
+            }
         }
     },
 }
@@ -69,22 +73,23 @@ $cinza-pastel: #d6d6d6;
 $cinza-claro: #ebebeb;
 
 #detalhes {
-    width: calc(100% - 3rem);
-    padding: 10px;
-    margin-top: 2rem;
+    width: calc(100% - 2rem);
+    max-width: 60rem;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
     background: linear-gradient(
     to right bottom,
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0.6)
     );
     backdrop-filter: blur(5px);
-    border-radius: 15px;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
     h2, h3, h4, li, a, p {
-        margin: 0.4rem;
+        margin: 0 0.5rem 0.5rem 0.5rem;
     }
     h2, h3, li {
         font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
@@ -133,7 +138,8 @@ $cinza-claro: #ebebeb;
         }
     }
     .add__input {
-        font-family: 'SF Pro';
+        font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+        font-size: 1rem;
         border: none;
         border-radius: 5px;
         margin: 0 0.5rem 0 0;
@@ -141,5 +147,12 @@ $cinza-claro: #ebebeb;
         color: white;
         background-color: rgba($color: white, $alpha: 0.2);
     }
+}
+
+@media screen and (min-width: 700px) {
+  #detalhes {
+    width: calc(100% - 4rem);
+    margin-top: 2rem;
+  }
 }
 </style>

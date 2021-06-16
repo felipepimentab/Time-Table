@@ -205,22 +205,23 @@ $carnation: #ffb1e5;
 }
 
 #bloco {
-  padding: 5px;
-  margin: 3px;
+  padding: 0;
+  margin: 0.2rem;
   
 
-  min-height: 50px;
+  min-height: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   color: $cinza-mais-escuro;
-  border-radius: 5px;
+  border-radius: 0.5rem;
   transition: background-color 200ms linear;
   h3 {
+    font-size: 1rem;
     font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     font-weight: bolder;
-    margin: 0;
+    margin: 0 0.1rem;
     padding: 0;
     cursor: default;
   }
@@ -232,12 +233,18 @@ $carnation: #ffb1e5;
     cursor: default;
   }
 }
+@media screen and (min-width: 360px) {
+  #bloco {
+    h3 {
+      margin: 0 0.5rem;
+    }
+  }
+}
 
 @media screen and (min-width: 700px) {
   #bloco {
-    padding: 10px;
-    margin: 5px;
-    min-height: 75px;
+    padding: 0.5rem;
+    min-height: 5rem;
     h4 {
       display: block;
     }
