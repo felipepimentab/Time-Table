@@ -90,6 +90,20 @@
     <Bloco :disciplinas="disciplinas" :index="org[57]"/>
     <Bloco :disciplinas="disciplinas" :index="org[58]"/>
     <Bloco :disciplinas="disciplinas" :index="org[59]"/>
+    
+    <div class="horario"><h3>19:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[60]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[61]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[62]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[63]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[64]"/>
+    
+    <div class="horario"><h3>20:00</h3></div>
+    <Bloco :disciplinas="disciplinas" :index="org[65]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[66]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[67]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[68]"/>
+    <Bloco :disciplinas="disciplinas" :index="org[69]"/>
   </div>
 </template>
 

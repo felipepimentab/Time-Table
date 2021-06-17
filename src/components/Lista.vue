@@ -52,7 +52,7 @@ $cinza-claro: #ebebeb;
 
 @media screen and (min-width: 1000px) {
     #lista {
-        width: 100%;
+        width: calc(100% - 2rem);
     }
 }
 </style>

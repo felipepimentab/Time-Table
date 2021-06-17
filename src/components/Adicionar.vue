@@ -47,6 +47,10 @@
                     <label class="horario__label" for="seg-1700">17:00</label><br>
                     <input type="checkbox" name="seg-1800" value="seg-1800" class="horario__input" v-model="posicao[55]">
                     <label class="horario__label" for="seg-1800">18:00</label><br>
+                    <input type="checkbox" name="seg-1900" value="seg-1900" class="horario__input" v-model="posicao[60]">
+                    <label class="horario__label" for="seg-1900">19:00</label><br>
+                    <input type="checkbox" name="seg-2000" value="seg-2000" class="horario__input" v-model="posicao[65]">
+                    <label class="horario__label" for="seg-2000">20:00</label><br>
                 </div>
 
                 <div class="horario__dia">
@@ -75,6 +79,10 @@
                     <label class="horario__label" for="ter-1700">17:00</label><br>
                     <input type="checkbox" name="ter-1800" value="ter-1800" class="horario__input" v-model="posicao[56]">
                     <label class="horario__label" for="ter-1800">18:00</label><br>
+                    <input type="checkbox" name="ter-1900" value="ter-1900" class="horario__input" v-model="posicao[61]">
+                    <label class="horario__label" for="ter-1900">19:00</label><br>
+                    <input type="checkbox" name="ter-2000" value="ter-2000" class="horario__input" v-model="posicao[66]">
+                    <label class="horario__label" for="ter-2000">20:00</label><br>
                 </div>
 
                 <div class="horario__dia">
@@ -103,6 +111,10 @@
                     <label class="horario__label" for="qua-1700">17:00</label><br>
                     <input type="checkbox" name="qua-1800" value="qua-1800" class="horario__input" v-model="posicao[57]">
                     <label class="horario__label" for="qua-1800">18:00</label><br>
+                    <input type="checkbox" name="qua-1900" value="qua-1900" class="horario__input" v-model="posicao[62]">
+                    <label class="horario__label" for="qua-1900">19:00</label><br>
+                    <input type="checkbox" name="qua-2000" value="qua-2000" class="horario__input" v-model="posicao[67]">
+                    <label class="horario__label" for="qua-2000">20:00</label><br>
                 </div>
 
                 <div class="horario__dia">
@@ -131,6 +143,10 @@
                     <label class="horario__label" for="qui-1700">17:00</label><br>
                     <input type="checkbox" name="qui-1800" value="qui-1800" class="horario__input" v-model="posicao[58]">
                     <label class="horario__label" for="qui-1800">18:00</label><br>
+                    <input type="checkbox" name="qui-1900" value="qui-1900" class="horario__input" v-model="posicao[63]">
+                    <label class="horario__label" for="qui-1900">19:00</label><br>
+                    <input type="checkbox" name="qui-2000" value="qui-2000" class="horario__input" v-model="posicao[68]">
+                    <label class="horario__label" for="qui-2000">20:00</label><br>
                 </div>
 
                 <div class="horario__dia">
@@ -159,6 +175,10 @@
                     <label class="horario__label" for="sex-1700">17:00</label><br>
                     <input type="checkbox" name="sex-1800" value="sex-1800" class="horario__input" v-model="posicao[59]">
                     <label class="horario__label" for="sex-1800">18:00</label><br>
+                    <input type="checkbox" name="sex-1900" value="sex-1900" class="horario__input" v-model="posicao[64]">
+                    <label class="horario__label" for="sex-1900">19:00</label><br>
+                    <input type="checkbox" name="sex-2000" value="sex-2000" class="horario__input" v-model="posicao[69]">
+                    <label class="horario__label" for="sex-2000">20:00</label><br>
                 </div>
             </div>
             
@@ -223,6 +243,8 @@ export default {
                 false, false, false, false, false,  
                 false, false, false, false, false,  
                 false, false, false, false, false, 
+                false, false, false, false, false,
+                false, false, false, false, false,
             ],
             organizador: JSON.parse(localStorage.getItem('organizador'))
         }
@@ -248,6 +270,8 @@ export default {
                 null, null, null, null, null,  
                 null, null, null, null, null,  
                 null, null, null, null, null,  
+                null, null, null, null, null,  
+                null, null, null, null, null, 
                 null, null, null, null, null,  
                 null, null, null, null, null, 
             ];
@@ -282,6 +306,8 @@ export default {
                 false, false, false, false, false,  
                 false, false, false, false, false,  
                 false, false, false, false, false,  
+                false, false, false, false, false,  
+                false, false, false, false, false, 
                 false, false, false, false, false,  
                 false, false, false, false, false, 
             ]
