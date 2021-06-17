@@ -3,19 +3,21 @@
         <h2>Suas disciplinas</h2>
         <span v-if="!disciplinas" class="sem-disiplinas">Você ainda não possui disciplinas</span>
         <ul>
-            <li :key="disciplina.lista" v-for="disciplina in disciplinas">
-                <div class="info">
-                    <h3>{{ disciplina.codigo }}</h3>
-                    <h4>{{ disciplina.nome }}</h4>
-                </div>
+            <li :key="disciplina" v-for="disciplina in disciplinas">
+                <ItemLista :disciplina="disciplina" />
             </li>
         </ul>
     </div>
 </template>
 
 <script>
+import ItemLista from './ItemLista.vue';
+
 export default {
     name: 'Lista',
+    components: {
+        ItemLista
+    },
     props: {
         disciplinas: Object,
     }
@@ -30,7 +32,6 @@ $cinza-claro: #ebebeb;
 
 #lista {
     margin: 1rem;
-    border-radius: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -40,26 +41,18 @@ $cinza-claro: #ebebeb;
         margin: 2rem 0 2rem 0;
     }
     ul {
+        width: calc(100% - 1rem);
         margin: 0;
-        padding: 0 0 0 20px;
-    }
-    h3 {
-        font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
-        margin: 0.3rem 0 0.3rem 0;
-    }
-    h4 {
-        font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
-        margin: 0.3rem 0 0.3rem 0;
+        padding: 0 0 0 1rem;
     }
     h2 {
         margin: 0;
     }
-    h4 {
-        color: $cinza-pastel;
-    }
-    span {
-        margin: 1rem;
-    }
 }
 
+@media screen and (min-width: 1000px) {
+    #lista {
+        width: 100%;
+    }
+}
 </style>
