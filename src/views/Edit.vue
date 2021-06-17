@@ -124,5 +124,9 @@ button {
     grid-template-columns: auto auto;
   }
 }
-
+@media screen and (min-width: 1000px) {
+  .split {
+    grid-template-columns: 1fr auto;
+  }
+}
 </style>
