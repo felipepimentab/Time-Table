@@ -12,7 +12,7 @@
         </div>
         <div class="form" v-if="editando">
             <form @submit.prevent="confirmaEdit()">
-            <input type="text" v-model="model.codigo" autofocus pattern="^([A-Z]{3} [0-9]{4})$">
+            <input type="text" v-model="model.codigo" autofocus maxlength="8">
             <input type="text" v-model="model.nome">
             <input type="text" v-model="model.professor">
             <input type="text" v-model="model.site">
