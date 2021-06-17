@@ -34,7 +34,7 @@ export default {
     Twitter,
     Vercel,
   },
-  methods: { /*
+  methods: {/*
     reset() { // Método apenas para testes
       localStorage.setItem('organizador', JSON.stringify([
       "a123",   null, "b123", "b123",   null,
@@ -138,11 +138,11 @@ html {
   scroll-behavior: smooth;
   overflow: overlay;
   ::-webkit-scrollbar { //the scrollbar.
-    width: 10px;
+    width: 0.5rem;
   } 
   ::-webkit-scrollbar-thumb { //the draggable scrolling handle.
     background: rgba($color: white, $alpha: 0.3);
-    width: 10px;
+    width: 0.5rem;
   }
   min-width: 100vw;
   min-height: 100vh;
@@ -154,8 +154,8 @@ html {
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  min-width: 100vw;
+  min-height: 100vh;
   padding: 0;
   margin: 0;
 }
