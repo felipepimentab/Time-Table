@@ -208,7 +208,8 @@ $carnation: #ffb1e5;
   padding: 0;
   margin: 0.2rem;
   
-
+  word-wrap: break-word;
+  word-break: all;
   min-height: 3rem;
   display: flex;
   flex-direction: column;
@@ -218,10 +219,13 @@ $carnation: #ffb1e5;
   border-radius: 0.5rem;
   transition: background-color 200ms linear;
   h3 {
+    word-wrap: break-word;
+    word-break: all;
+    max-width: 2rem;
     font-size: 1rem;
     font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     font-weight: bolder;
-    margin: 0 0.1rem;
+    margin: 0;
     padding: 0;
     cursor: default;
   }
@@ -236,7 +240,8 @@ $carnation: #ffb1e5;
 @media screen and (min-width: 360px) {
   #bloco {
     h3 {
-      margin: 0 0.5rem;
+      margin: 0 0.1rem;
+      max-width: 3rem;
     }
   }
 }
@@ -244,6 +249,7 @@ $carnation: #ffb1e5;
 @media screen and (min-width: 700px) {
   #bloco {
     padding: 0.5rem;
+   min-height: 2rem;
     h4 {
       display: block;
     }
