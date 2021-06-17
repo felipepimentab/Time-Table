@@ -39,6 +39,7 @@ export default {
     data() {
         return {
             disciplinas: JSON.parse(localStorage.getItem('disciplinas')),
+            organizador: JSON.parse(localStorage.getItem('organizador')),
             editando: false,
             model: this.disciplina,
         }
@@ -47,7 +48,13 @@ export default {
         apagaDisciplina() {
             if(confirm('Tem certeza que deseja excluir esta disciplina?')) {
                 this.disciplinas.splice((this.disciplinas.findIndex(element => element.id == this.disciplina.id)), 1);
-                localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas))
+                localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas));
+                this.organizador.forEach(element => {
+                    if (element == this.disciplina.id) {
+                        element = null;
+                    }
+                });
+                localStorage.setItem('organizador', JSON.stringify(this.organizador));
             } else {
                 console.log('A disciplina não foi apagada')
             }
