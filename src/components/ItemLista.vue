@@ -12,12 +12,12 @@
         </div>
         <div class="form" v-if="editando">
             <form @submit.prevent="confirmaEdit()">
-            <input type="text" v-model="model.codigo" autofocus>
+            <input type="text" v-model="model.codigo" autofocus pattern="^([A-Z]{3} [0-9]{4})$">
             <input type="text" v-model="model.nome">
             <input type="text" v-model="model.professor">
             <input type="text" v-model="model.site">
             <input type="text" v-model="model.link">
-            <input type="submit" value="CONFIRMAR" class="submit">
+            <input type="submit" value="Confirmar" class="submit">
             </form>
         </div>
     </div>
@@ -91,7 +91,7 @@ h4 {
 }
 .botoes {
     fill: #ebebeb;
-    :hover {
+    &:hover {
         cursor: pointer;
     }
     svg {
@@ -108,6 +108,10 @@ form {
         padding: 0.5rem;
         background-color: rgba($color: white, $alpha: 0.2);
         border-radius: 0.5rem;
+        transition: background-color 200ms linear;
+        &:hover {
+            background-color: rgba($color: white, $alpha: 0.1);
+        }
     }
     input {
         background: none;
