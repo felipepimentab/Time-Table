@@ -338,27 +338,32 @@ $cinza-claro: #ebebeb;
     text-align: start;
     color: $cinza-claro;
     font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
-    h2, h4 {
-        margin: 0 0 1rem 0;
+    h2 {
+        margin: 0 0 0.5rem 0;
     }
-    h3 {
-        margin: 0;
+    h3, h4 {
+        margin: 0 0 0.5rem 0;
     }
     .horario {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
         .horario__dia {
-        padding: 1rem;
         width: auto;
+        margin: 0 0.5rem;
         }
         .horario__input {
-            width: auto;
+            width: 1.5rem;
+            height: 1.5rem;
             padding: 0.5rem;
+            margin: 0;
         }
         .horario__label {
+            position: relative;
+            bottom: 0.3rem;
             width: auto;
-            padding: 0.5rem;
+            height: auto;
+            margin: 0.5rem;
         }
     }
 
@@ -374,9 +379,9 @@ $cinza-claro: #ebebeb;
     form {
         width: 100%;
     }
+    
     input {
         border: none;
-        margin: 0.5rem 0 1rem 0;
         padding: 0.3rem;
         
         border-radius: 0.3rem;
@@ -386,6 +391,7 @@ $cinza-claro: #ebebeb;
     }
     .infos {
         width: calc(100% - 0.6rem);
+        margin: 0.1rem 0 0.5rem 0;
     }
     .add {
         font-size: 1.2rem;
