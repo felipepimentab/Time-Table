@@ -119,7 +119,9 @@ button {
     margin-top: 2rem;
   }
   .split {
-    flex-direction: row;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto auto;
   }
 }
 

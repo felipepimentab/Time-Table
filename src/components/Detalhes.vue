@@ -10,7 +10,7 @@
             <li :key="tarefa.id" v-for="tarefa in disciplina.tarefas">{{ tarefa }} </li>
         </ul>
         <ul class="add">
-            <li><button class="add__btn" @click="adicionar()" v-show="ativo"><p>&plus;</p></button></li>  
+            <li class="add__btn" @click="adicionar()" v-show="ativo"><Add :width="24" :height="24"/></li>  
             <li v-show="!ativo">
                 <form @submit.prevent="adicionaTarefa()">
                     <input 
@@ -26,8 +26,13 @@
 </template>
 
 <script>
+import Add from './icons/add.vue'
+
 export default {
     name: 'Detalhes',
+    components: {
+        Add
+    },
     props: {
         disciplinas: Object
     },
@@ -118,23 +123,13 @@ $cinza-claro: #ebebeb;
         }
     }
     .add__btn {
-        font-family: 'SF Rounded';
         margin: 0;
         padding: 0;
-        width: 1.5rem;
-        height: 1.5rem;
-        color: white;
-        display: flex;
-        align-content: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        border: none;
-        border-radius: 100%;
-        background-color: rgba($color: white, $alpha: 0.2);
-        p {
-            position: relative;
-            bottom: 0.2rem;
-            margin: 0;
+        :hover {
+            cursor: pointer;
+        }
+        svg {
+            fill: #ebebeb;
         }
     }
     .add__input {
