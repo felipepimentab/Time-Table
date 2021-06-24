@@ -1,7 +1,7 @@
 <template>
     <div id="adicionar">
         <h2>Adicionar disciplina</h2>
-        <form @submit="adiciona()" action="/#/edit">
+        <form @submit.prevent="adiciona()">
             <label for="codigo">Abreviação da disciplina:</label><br>
             <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" maxlength="8" placeholder="Máx: 8 caractéres" aria-placeholder="ABCDEFGH"><br>
 
@@ -185,7 +185,7 @@
 
 
             <label for="cor">Cor:</label><br>
-            <select name="cor" id="cor" class="drop-down" @input="disciplina.cor = $event.target.value" :value="disciplina.cor" required>
+            <select name="cor" id="cor" class="drop-down" v-model="disciplina.cor" required>
                 <option value="lime">Lime</option>
                 <option value="spring">Spring</option>
                 <option value="sea-foam">Sea Foam</option>
@@ -310,7 +310,8 @@ export default {
                 false, false, false, false, false, 
                 false, false, false, false, false,  
                 false, false, false, false, false, 
-            ]
+            ];
+            this.$router.go(0);
         }
     },
 }

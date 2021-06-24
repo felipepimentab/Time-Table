@@ -17,6 +17,29 @@
             <input type="text" v-model="model.professor">
             <input type="text" v-model="model.site">
             <input type="text" v-model="model.link">
+            <select name="cor" id="cor" class="drop-down" v-model="model.cor" required>
+                <option value="lime">Lime</option>
+                <option value="spring">Spring</option>
+                <option value="sea-foam">Sea Foam</option>
+                <option value="turquoise">Turquoise</option>
+                <option value="aqua">Aqua</option>
+                <option value="blueberry">Blueberry</option>
+                <option value="grape">Grape</option>
+                <option value="magenta">Magenta</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="salmon">Salmon</option>
+                <option value="cantaloupe">Cantaloupe</option>
+                <option value="banana">Banana</option>
+                <option value="honeydew">Honeydew</option>
+                <option value="flora">Flora</option>
+                <option value="spindrift">Spindrift</option>
+                <option value="ice">Ice</option>
+                <option value="sky">Sky</option>
+                <option value="orchid">Orchid</option>
+                <option value="lavender">Lavender</option>
+                <option value="bubblegum">Bubblegum</option>
+                <option value="carnation">Carnation</option>
+            </select>
             <input type="submit" value="Confirmar" class="submit">
             </form>
         </div>
@@ -49,14 +72,14 @@ export default {
             if(confirm('Tem certeza que deseja excluir esta disciplina?')) {
                 this.disciplinas.splice((this.disciplinas.findIndex(element => element.id == this.disciplina.id)), 1);
                 localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas));
+                
                 this.organizador.forEach(element => {
                     if (element == this.disciplina.id) {
-                        element = null;
+                        this.organizador.splice((this.organizador.findIndex(elmnt => elmnt == this.disciplina.id)), 1, null);
                     }
                 });
                 localStorage.setItem('organizador', JSON.stringify(this.organizador));
-            } else {
-                console.log('A disciplina não foi apagada')
+                this.$router.go(0);
             }
         },
         comecaEdit() {
@@ -98,6 +121,16 @@ h4 {
         padding-left: 0.5rem;
         
     }
+}
+
+select {
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 5px;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.25rem;
+    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
 }
 
 form {
