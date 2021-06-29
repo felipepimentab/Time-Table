@@ -2,13 +2,13 @@
     <div id="adicionar">
         <h2>Adicionar disciplina</h2>
         <form @submit.prevent="adiciona()">
-            <label for="codigo">Código da disciplina:</label><br>
+            <label for="codigo">Código da disciplina: *</label><br>
             <input type="text" name="codigo" class="infos" v-model="disciplina.codigo" required pattern="^([A-Z]{3} [0-9]{4})$" placeholder="ABC 1234" aria-placeholder="BCD 4567"><br>
 
-            <label for="nome">Nome da disciplina:</label><br>
+            <label for="nome">Nome da disciplina: *</label><br>
             <input type="text" name="nome" class="infos" v-model="disciplina.nome" required placeholder="Disciplina"><br>
 
-            <label for="professor">Professor(a) responsável:</label><br>
+            <label for="professor">Professor(a) responsável: *</label><br>
             <input type="text" name="professor" class="infos" v-model="disciplina.professor" required
             placeholder="Nome do(a) professor(a)"><br>
 
@@ -18,7 +18,7 @@
             <label for="link">Link:</label><br>
             <input type="url" name="link" class="infos" v-model="disciplina.link" placeholder="http://www.endereço.com.br"><br>
 
-            <h3>Horário</h3>
+            <h3>Horário *</h3>
 
             <div class="horario">
                 <div class="horario__dia">
@@ -104,7 +104,7 @@
             
 
 
-            <label for="cor">Cor:</label><br>
+            <label for="cor">Cor: *</label><br>
             <select name="cor" id="cor" class="drop-down" v-model="disciplina.cor" required>
                 <option value="lime">Lime</option>
                 <option value="spring">Spring</option>
@@ -135,6 +135,7 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex';
 import Disciplina from '../domain/disciplina/disciplina.js'
 
 export default {
@@ -156,21 +157,22 @@ export default {
                 false, false, false, false, false, 
                 false, false, false, false, false, 
             ],
-            organizador: JSON.parse(localStorage.getItem('organizador'))
         }
     },
-    props: {
-        disciplinas: Array,
+    computed: {
+        ...mapGetters([
+            'disciplinas',
+            'organizador',
+         ]),
     },
     methods: {
-        adiciona() {
-            if (this.disciplinas) {
-                var dis = this.disciplinas;
-                var org = this.organizador;
-            } else {
-                dis = [];
-                org = [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null];
-            }
+        ...mapMutations([
+            'SET_DISCIPLINAS',
+            'SET_ORGANIZADOR',
+        ]),
+        adiciona() { 
+            var dis = this.disciplinas;
+            var org = this.organizador;
             this.disciplina = new Disciplina(
                 this.disciplina.codigo,
                 this.disciplina.nome,
@@ -180,18 +182,16 @@ export default {
                 this.disciplina.cor
             );
             dis.push(this.disciplina);
-            localStorage.setItem('disciplinas', JSON.stringify(dis));
+            this.$store.commit('SET_DISCIPLINAS', dis)
 
             for(let i=0; i<= this.posicao.length; i++) {
                 if(this.posicao[i] === true && org[i] === null) {
-                    //org[i] = dis.length-1;
                     org[i] = this.disciplina.id;
                 }
             }
-            localStorage.setItem('organizador', JSON.stringify(org));
+            this.$store.commit('SET_ORGANIZADOR', org)
             this.disciplina = {codigo: '', nome: '', professor: '', site: '', link: '', cor: '', tarefas: []}
             this.posicao = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false]
-            this.$router.go(0);
         }
     },
 }

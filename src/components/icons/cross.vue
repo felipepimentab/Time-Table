@@ -2,23 +2,24 @@
     <svg 
         :width="width"
         :height="height"
-        aria-labelledby="Editar"
+        aria-labelledby="Excluir tarefa"
         role="img"
         viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg">
-                
+        xmlns="http://www.w3.org/2000/svg"
+        fill-rule="evenodd"
+        clip-rule="evenodd">        
         <g :fill="color"> <slot/> </g>
         
         <title>
-            Editar
+            Excluir tarefa
         </title>
-        <path d="M14.078 7.061l2.861 2.862-10.799 10.798-3.584.723.724-3.585 10.798-10.798zm0-2.829l-12.64 12.64-1.438 7.128 7.127-1.438 12.642-12.64-5.691-5.69zm7.105 4.277l2.817-2.82-5.691-5.689-2.816 2.817 5.69 5.692z"/>
+        <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/>
     </svg>
 </template>
 
 <script>
 export default {
-    name: 'Pencil',
+    name: 'Cross',
     props: {
         width: {
             type: [Number, String],
@@ -30,7 +31,7 @@ export default {
         },
         color: {
             type: String,
-            default: 'white'
+            default: 'black'
         }
     }
 }

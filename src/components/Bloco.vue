@@ -6,6 +6,7 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   name: 'Bloco',
   props: {
@@ -18,9 +19,12 @@ export default {
     }
   },
   methods: {
+    ...mapMutations ([
+      'SET_SELETOR'
+    ]),
     detalhe(index) {
       if (index!=null) {
-        this.$store.commit('SELECIONAR_DETALHES', this.disciplina.id)
+        this.$store.commit('SET_SELETOR', this.disciplina.id)
       }
     }
   },

@@ -1,7 +1,7 @@
 <template>
     <div :key="disciplinas" id="lista">
         <h2>Suas disciplinas</h2>
-        <span v-if="!disciplinas" class="sem-disiplinas">Você ainda não possui disciplinas</span>
+        <span v-if="disciplinas.lenght=0" class="sem-disciplinas">Você ainda não possui disciplinas</span>
         <ul>
             <li :key="disciplina" v-for="disciplina in disciplinas">
                 <ItemLista :disciplina="disciplina" />
@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
 import ItemLista from './ItemLista.vue';
 
 export default {
@@ -18,8 +19,10 @@ export default {
     components: {
         ItemLista
     },
-    props: {
-        disciplinas: Object,
+    computed: {
+        ...mapGetters ([
+            'disciplinas'
+        ])
     }
 }
 </script>

@@ -3,17 +3,18 @@
         <h2>{{ disciplina.codigo }}</h2>
         <h3>{{ disciplina.nome }}</h3>
         <h4>Professor(a): {{ disciplina.professor }}</h4>
-        <div v-if="disciplina.link!='#'" class="link">
-            <p>Site:</p><a :href="disciplina.link">{{ disciplina.site }}</a>
+        <div v-if="disciplina.link!=''" class="link">
+            <p>Site:</p><a :href="disciplina.link"> {{ disciplina.site }}</a>
         </div>
+        <h4>Tarefas:</h4>
         <ul>
-            <li :key="tarefa.id" v-for="tarefa in disciplina.tarefas">{{ tarefa }} </li>
+            <li :key="tarefa.id" v-for="tarefa in disciplina.tarefas">{{ tarefa }} <button @click="apagaTarefa(tarefa)"><Eraser :height="16" :width="16" class="botoes"/></button></li> 
         </ul>
         <ul class="add">
             <li class="add__btn" @click="adicionar()" v-show="ativo"><Add :width="24" :height="24"/></li>  
             <li v-show="!ativo">
                 <form @submit.prevent="adicionaTarefa()">
-                    <input 
+                    <input autofocus 
                     class="add__input" 
                     type="text" 
                     placeholder="Nova tarefa" 
@@ -26,15 +27,15 @@
 </template>
 
 <script>
+import { mapGetters, mapMutations } from 'vuex'
 import Add from './icons/add.vue'
+import Eraser from './icons/eraser.vue'
 
 export default {
     name: 'Detalhes',
     components: {
-        Add
-    },
-    props: {
-        disciplinas: Object
+        Add,
+        Eraser,
     },
     data() {
         return {
@@ -44,25 +45,39 @@ export default {
         }
     },
     methods: {
+        ...mapMutations ([
+            'SET_DISCIPLINAS'
+        ]),
         adicionar() {
             this.ativo = false
         },
         adicionaTarefa() {
             if (this.novaTarefa != '') {
                 this.ativo = true;
-                const auxiliar = this.disciplinas;
-                const minhasTarefas = auxiliar[this.disciplinas.findIndex(element => element.id == this.disciplina.id)].tarefas;
+                const dis = this.disciplinas;
+                const minhasTarefas = dis[this.disciplinas.findIndex(element => element.id == this.disciplina.id)].tarefas;
                 minhasTarefas.push(this.novaTarefa);
-                auxiliar[this.disciplinas.findIndex(element => element.id == this.disciplina.id)].tarefas = minhasTarefas;
-                localStorage.setItem('disciplinas', JSON.stringify(auxiliar));
+                dis[this.disciplinas.findIndex(element => element.id == this.disciplina.id)].tarefas = minhasTarefas;
+                this.$store.commit('SET_DISCIPLINAS', dis);
                 this.novaTarefa = '';
             }
+        },
+        apagaTarefa(tarefa) {
+            const dis = this.disciplinas;
+            const minhasTarefas = dis[this.disciplinas.findIndex(element => element.id == this.disciplina.id)].tarefas;
+            minhasTarefas.splice((minhasTarefas.findIndex(elemento => elemento == tarefa)), 1);
+            dis[this.disciplinas.findIndex(element => element.id == this.disciplina.id)].tarefas = minhasTarefas;
+            this.$store.commit('SET_DISCIPLINAS', dis);
         }
     },
     computed: {
+        ...mapGetters([
+            'disciplinas',
+            'seletor',
+        ]),
         disciplina() {
             if (this.disciplinas) {
-                return this.disciplinas.find(element => element.id == this.$store.state.selecionado)
+                return this.disciplinas.find(element => element.id == this.seletor)
             } else {
                 return null
             }
@@ -93,7 +108,7 @@ $cinza-claro: #ebebeb;
     flex-direction: column;
     align-items: flex-start;
     text-align: start;
-    h2, h3, h4, li, a, p {
+    h2, h3, h4, li {
         margin: 0 0.5rem 0.5rem 0.5rem;
     }
     h2, h3, li {
@@ -110,6 +125,12 @@ $cinza-claro: #ebebeb;
     a, p {
         padding: 0;
         font-weight: 600;
+    }
+    a {
+        margin: 0 0 0.5rem 0.2rem;
+    }
+    p {
+        margin: 0 0 0.5rem 0.5rem;
     }
     ul {
         margin: 0;
@@ -142,6 +163,22 @@ $cinza-claro: #ebebeb;
         color: white;
         background-color: rgba($color: white, $alpha: 0.2);
     }
+    button {
+        background: none;
+        border: none;
+        padding: 0;
+        margin: 0 0 0 0.5rem;
+    }
+    .botoes {
+    fill: #ebebeb;
+    &:hover {
+        cursor: pointer;
+    }
+    svg {
+        padding-left: 0.5rem;
+        
+    }
+}
 }
 
 @media screen and (min-width: 700px) {

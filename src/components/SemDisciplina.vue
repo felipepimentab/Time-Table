@@ -1,6 +1,6 @@
 <template>
     <router-link to="/edit" class="sem-disciplina">
-        <h2>Ops...</h2>
+        <h2>Monte sua grade</h2>
         <h3>Parece que você ainda não possui disciplinas</h3>
         <h3>Clique aqui para adicionar</h3>
     </router-link>
