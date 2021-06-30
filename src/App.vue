@@ -8,7 +8,7 @@
   </div>
   <router-view/>
   <div class="rodape">
-    <p @click="reset()">Desenvolvido por Felipe Pimenta &copy; em Vitória </p>
+    <p>Desenvolvido por Felipe Pimenta &copy; em Vitória </p>
     <div class="links">
       <a href="https://www.instagram.com/felipepimentab/"><Instagram/></a>
       <a href="https://twitter.com/felipepimentab"><Twitter/></a>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { mapActions } from 'vuex';
+import { mapActions, mapMutations } from 'vuex';
 import GitHub from './components/icons/github.vue';
 import Instagram from './components/icons/instagram.vue';
 import LinkedIn from './components/icons/linkedin.vue';
@@ -38,87 +38,11 @@ export default {
   methods: {
     ...mapActions([
     'lerMemoria'
-    ])
-    /*
-    reset() { // Método apenas para testes
-      localStorage.setItem('organizador', JSON.stringify([
-      "a123",   null, "b123", "b123",   null,
-        null, "c123", "a123", "d123", "d123",
-      "e123", "f123", "e123", "f123",   null,
-      "g123",   null,   null,   null,   null]));
-      localStorage.setItem('disciplinas', JSON.stringify([
-        {
-          "id": "a123",
-          "codigo":"SEL 0401",
-          "nome":"Eletrônica de Potência",
-          "professor":"José Roberto Boffino de Almeida",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=87770",
-          "tarefas":[" Prova única - 14/07"],
-          "cor":"bubblegum"
-        },
-        {
-          "id": "b123",
-          "codigo":"SEL 0310",
-          "nome":"Ondas Eletromagnéticas",
-          "professor":"Leonardo André Ambrósio",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=86361",
-          "tarefas":[" Lista 01 - 19/05"," Lista 02 - 26/05"," Lista 03 - 09/06"," Lista 04 - 16/06"," Lista 05 - 23/06"," P1 - 24/07"," P2 - 31/07"],
-          "cor":"turquoise"
-        },
-        {
-          "id": "c123",
-          "codigo":"SEL 0317",
-          "nome":"Laboratório de Circuitos Eletrônicos II",
-          "professor":"Marlon Rodrigues Garcia",
-          "site":"Não tem site",
-          "link":"#",
-          "tarefas":[],
-          "cor":"blueberry"
-        },
-        {
-          "id": "d123",
-          "codigo":"SEL 0315",
-          "nome":"Circuitos Eletrônicos III",
-          "professor":"João Paulo Pereira do Carmo",
-          "site":"Não tem site",
-          "link":"#",
-          "tarefas":[" P1 - 25/06"," P2 - 23/07"],
-          "cor":"spring"
-        },
-        {
-          "id": "e123",
-          "codigo":"SME 0320",
-          "nome":"Estatística I",
-          "professor":"Reiko Aoki",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=88184",
-          "tarefas":[" P1 - 26/05"," P2 - 21/07"],
-          "cor":"sea-foam"
-        },
-        {
-          "id": "f123",
-          "codigo":"SMA 0356",
-          "nome":"Cálculo IV",
-          "professor":"Sergio Henrique Monari Soares",
-          "site":"Moodle",
-          "link":"https://edisciplinas.usp.br/course/view.php?id=87079",
-          "tarefas":[" Atividades semanais no moodle"," P1 - 22/05"," P2 - 19/06"," P3 - 31/07"],
-          "cor":"salmon"
-        },
-        {
-          "id": "g123",
-          "codigo":"SEP 0587",
-          "nome":"Princípios de Economia",
-          "professor":"Humberto Filipe de Andrade Januário Bettini",
-          "site":"Não tem site",
-          "link":"#",
-          "tarefas":["Texto preliminar - 07/06", "P1 - 28/06", "Texto parcial - 12/07", "Texto final - 26/07", "Vídeo - 16/08"],
-          "cor":"banana"
-        },
-      ]));
-    }*/
+    ]),
+    ...mapMutations([
+      'SET_DISCIPLINAS',
+      'SET_ORGANIZADOR'
+    ]),
   },
   created() {
     this.lerMemoria();
