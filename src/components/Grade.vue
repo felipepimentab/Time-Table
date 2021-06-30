@@ -8,118 +8,120 @@
     <div class="dia"><h3>Sexta</h3></div>
 
     <div class="horario"><h3>7:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[0]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[1]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[2]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[3]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[4]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[0]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[1]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[2]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[3]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[4]"/>
 
     <div class="horario"><h3>8:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[5]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[6]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[7]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[8]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[9]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[5]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[6]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[7]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[8]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[9]"/>
 
     <div class="horario"><h3>9:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[10]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[11]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[12]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[13]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[14]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[10]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[11]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[12]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[13]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[14]"/>
 
     <div class="horario"><h3>10:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[15]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[16]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[17]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[18]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[19]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[15]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[16]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[17]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[18]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[19]"/>
 
     <div class="horario"><h3>11:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[20]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[21]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[22]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[23]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[24]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[20]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[21]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[22]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[23]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[24]"/>
 
     <div class="horario"><h3>12:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[25]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[26]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[27]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[28]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[29]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[25]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[26]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[27]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[28]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[29]"/>
 
     <div class="horario"><h3>13:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[30]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[31]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[32]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[33]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[34]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[30]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[31]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[32]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[33]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[34]"/>
 
     <div class="horario"><h3>14:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[35]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[36]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[37]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[38]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[39]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[35]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[36]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[37]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[38]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[39]"/>
 
     <div class="horario"><h3>15:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[40]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[41]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[42]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[43]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[44]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[40]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[41]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[42]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[43]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[44]"/>
 
     <div class="horario"><h3>16:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[45]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[46]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[47]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[48]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[49]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[45]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[46]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[47]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[48]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[49]"/>
 
     <div class="horario"><h3>17:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[50]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[51]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[52]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[53]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[54]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[50]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[51]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[52]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[53]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[54]"/>
 
     <div class="horario"><h3>18:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[55]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[56]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[57]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[58]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[59]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[55]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[56]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[57]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[58]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[59]"/>
     
     <div class="horario"><h3>19:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[60]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[61]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[62]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[63]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[64]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[60]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[61]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[62]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[63]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[64]"/>
     
     <div class="horario"><h3>20:00</h3></div>
-    <Bloco :disciplinas="disciplinas" :index="org[65]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[66]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[67]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[68]"/>
-    <Bloco :disciplinas="disciplinas" :index="org[69]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[65]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[66]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[67]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[68]"/>
+    <Bloco :disciplinas="disciplinas" :index="organizador[69]"/>
   </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 import Bloco from './Bloco.vue'
 
 export default {
   name: 'Grade',
-  props: {
-    disciplinas: Object,
-    org: Array,
+  computed: {
+    ...mapGetters([
+      'disciplinas',
+      'organizador',
+    ]),
   },
   components: {
     Bloco
   },
-  emits: ['detalhe-id'],
 }
 </script>
 

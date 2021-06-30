@@ -2,8 +2,8 @@
   <div id="edit" class="edit">
     <div class="container">
       <div class="split">
-      <Lista :key="disciplinas" :disciplinas="disciplinas"/>
-      <Adicionar :key="disciplinas" :disciplinas="disciplinas"/>
+      <Lista/>
+      <Adicionar/>
       </div>
       <div class="botao"><button @click="apaga()">Apagar todas as disciplinas</button></div>
     </div>
@@ -15,6 +15,7 @@
 <script>
 import Lista from '@/components/Lista.vue';
 import Adicionar from '@/components/Adicionar.vue';
+import { mapActions, mapGetters, mapMutations } from 'vuex';
 
 export default {
   name: 'Edit',
@@ -22,19 +23,23 @@ export default {
     Lista,
     Adicionar
   },
-  data: function() {
-    return {
-      disciplinas: JSON.parse(localStorage.getItem('disciplinas')),
-    }
+  computed: {
+    ...mapGetters([
+      'disciplinas'
+    ])
   },
   methods: {
+    ...mapMutations([
+      'SET_DISCIPLINAS',
+      'SET_ORGANIZADOR',
+    ]),
+    ...mapActions([
+      'lerMemoria'
+    ]),
     apaga() {
       if(confirm('Tem certeza que deseja apagar todas as disciplinas?')) {
-        console.log('Todas as disciplinas foram apagadas');
         localStorage.clear();
-        this.disciplinas = JSON.parse(localStorage.getItem('disciplinas'));
-      } else {
-        console.log('Nenhuma disciplina foi apagada');
+        this.lerMemoria();
       }
     }
   }

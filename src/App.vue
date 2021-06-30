@@ -20,6 +20,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex';
 import GitHub from './components/icons/github.vue';
 import Instagram from './components/icons/instagram.vue';
 import LinkedIn from './components/icons/linkedin.vue';
@@ -34,7 +35,11 @@ export default {
     Twitter,
     Vercel,
   },
-  methods: {/*
+  methods: {
+    ...mapActions([
+    'lerMemoria'
+    ])
+    /*
     reset() { // Método apenas para testes
       localStorage.setItem('organizador', JSON.stringify([
       "a123",   null, "b123", "b123",   null,
@@ -114,7 +119,10 @@ export default {
         },
       ]));
     }*/
-  }
+  },
+  created() {
+    this.lerMemoria();
+  },
 }
 </script>
 

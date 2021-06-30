@@ -12,11 +12,11 @@
         </div>
         <div class="form" v-if="editando">
             <form @submit.prevent="confirmaEdit()">
-            <input type="text" v-model="model.codigo" autofocus maxlength="8">
-            <input type="text" v-model="model.nome">
-            <input type="text" v-model="model.professor">
-            <input type="text" v-model="model.site">
-            <input type="text" v-model="model.link">
+            <input type="text" v-model="model.codigo" autofocus required maxlength="8">
+            <input type="text" v-model="model.nome" required>
+            <input type="text" v-model="model.professor" required>
+            <input type="text" v-model="model.site" placeholder="Site">
+            <input type="text" v-model="model.link" placeholder="Link">
             <select name="cor" id="cor" class="drop-down" v-model="model.cor" required>
                 <option value="lime">Lime</option>
                 <option value="spring">Spring</option>
@@ -49,6 +49,7 @@
 <script>
 import Pencil from './icons/pencil.vue';
 import Eraser from './icons/eraser.vue';
+import { mapGetters, mapMutations } from 'vuex';
 
 export default {
     name: "ItemLista",
@@ -59,27 +60,36 @@ export default {
     props: {
         disciplina: Object
     },
+    computed: {
+        ...mapGetters([
+            'disciplinas',
+            'organizador'
+        ])
+    },
     data() {
         return {
-            disciplinas: JSON.parse(localStorage.getItem('disciplinas')),
-            organizador: JSON.parse(localStorage.getItem('organizador')),
             editando: false,
             model: this.disciplina,
         }
     },
     methods: {
+        ...mapMutations([
+            'SET_DISCIPLINAS',
+            'SET_ORGANIZADOR'
+        ]),
         apagaDisciplina() {
             if(confirm('Tem certeza que deseja excluir esta disciplina?')) {
-                this.disciplinas.splice((this.disciplinas.findIndex(element => element.id == this.disciplina.id)), 1);
-                localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas));
+                let dis = this.disciplinas;
+                dis.splice((dis.findIndex(element => element.id == this.disciplina.id)), 1);
+                this.$store.commit('SET_DISCIPLINAS', dis);
                 
-                this.organizador.forEach(element => {
+                let org = this.organizador;
+                org.forEach(element => {
                     if (element == this.disciplina.id) {
-                        this.organizador.splice((this.organizador.findIndex(elmnt => elmnt == this.disciplina.id)), 1, null);
+                        org.splice((org.findIndex(elmnt => elmnt == this.disciplina.id)), 1, null);
                     }
                 });
-                localStorage.setItem('organizador', JSON.stringify(this.organizador));
-                this.$router.go(0);
+                this.$store.commit('SET_ORGANIZADOR', org)
             }
         },
         comecaEdit() {
@@ -87,8 +97,9 @@ export default {
         },
         confirmaEdit() {
             this.editando = false;
-            this.disciplinas.splice((this.disciplinas.findIndex(element => element.id == this.disciplina.id)), 1, this.model);
-            localStorage.setItem('disciplinas', JSON.stringify(this.disciplinas));
+            let dis = this.disciplinas;
+            dis.splice((dis.findIndex(element => element.id == this.disciplina.id)), 1, this.model);
+            this.$store.commit('SET_DISCIPLINAS', dis);
         }
     }
 }
