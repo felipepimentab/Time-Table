@@ -4,7 +4,7 @@
         <h3>{{ disciplina.nome }}</h3>
         <h4>Professor(a): {{ disciplina.professor }}</h4>
         <div v-if="disciplina.link!=''" class="link">
-            <p>Site:</p><a :href="disciplina.link"> {{ disciplina.site }}</a>
+            <p>Site:</p><a :href="disciplina.link" target="_blank"> {{ disciplina.site }}</a>
         </div>
         <h4>Tarefas:</h4>
         <ul>
