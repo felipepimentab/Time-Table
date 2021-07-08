@@ -9,6 +9,7 @@
   <router-view/>
   <div class="rodape">
     <p>Desenvolvido por Felipe Pimenta &copy; em Vitória </p>
+    <p>v {{ versao.numero }} - {{ versao.nome }}</p>
     <div class="links">
       <a href="https://www.instagram.com/felipepimentab/"><Instagram/></a>
       <a href="https://twitter.com/felipepimentab"><Twitter/></a>
@@ -20,7 +21,7 @@
 </template>
 
 <script>
-import { mapActions, mapMutations } from 'vuex';
+import { mapActions, mapGetters, mapMutations } from 'vuex';
 import GitHub from './components/icons/github.vue';
 import Instagram from './components/icons/instagram.vue';
 import LinkedIn from './components/icons/linkedin.vue';
@@ -47,6 +48,11 @@ export default {
   created() {
     this.lerMemoria();
   },
+  computed: {
+    ...mapGetters([
+      'versao'
+    ])
+  }
 }
 </script>
 
@@ -138,7 +144,7 @@ body {
   font-family: Montserrat;
   p {
     font-weight: bold;
-    padding: 1rem;
+    padding: 0 1rem 1rem 1rem;
     margin: 0;
     cursor: default;
   }

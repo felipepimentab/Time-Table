@@ -15,18 +15,13 @@
 <script>
 import Lista from '@/components/Lista.vue';
 import Adicionar from '@/components/Adicionar.vue';
-import { mapActions, mapGetters, mapMutations } from 'vuex';
+import { mapActions, mapMutations } from 'vuex';
 
 export default {
   name: 'Edit',
   components: {
     Lista,
     Adicionar
-  },
-  computed: {
-    ...mapGetters([
-      'disciplinas'
-    ])
   },
   methods: {
     ...mapMutations([

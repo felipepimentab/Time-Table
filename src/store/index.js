@@ -3,9 +3,10 @@ import { createStore } from 'vuex'
 const store = createStore({
     state() {
         return{
+            versao: {numero: "1.0", nome: "USP", altNome: "UFES", altLink: "https://time-table-ufes.vercel.app/"},
             seletor: null,
             disciplinas: [],
-            organizador: [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+            organizador: [],
         }
     },
     mutations: {
@@ -25,6 +26,7 @@ const store = createStore({
         seletor: (state) => state.seletor,
         disciplinas: (state) => state.disciplinas,
         organizador: (state) => state.organizador,
+        versao: (state) => state.versao,
     },
     actions: {
         lerMemoria() {
@@ -35,7 +37,10 @@ const store = createStore({
                 store.commit('SET_ORGANIZADOR', org);
             } else {
                 store.commit('SET_DISCIPLINAS', []);
-                store.commit('SET_ORGANIZADOR', [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null]);
+                store.commit('SET_ORGANIZADOR', [null, null, null, null, null,
+                                                 null, null, null, null, null,
+                                                 null, null, null, null, null, 
+                                                 null, null, null, null, null]);
             }
         },
     }

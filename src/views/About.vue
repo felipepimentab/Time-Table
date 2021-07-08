@@ -24,16 +24,25 @@
               <li><p>Selecione a opção "Adicionar atalho para a página".</p></li>
             </ul>
           </div>
+          <h3>Notas de versão</h3>
+          <p>Está aplicação está na versão {{ versao.numero }} - {{ versao.nome }}. A versão {{ versao.nome }} possui a grade horária com os horários das disciplinas de acordo com os horários padrões para disciplinas da {{ versao.nome}}.</p>
+          <p>Se você deseja uma grade horária com os horários das disciplinas hora a hora, confira a versão <a :href="versao.altLink">{{ versao.altNome }}</a>.</p>
           <h3>Considerações</h3>
-          <p>Esta aplicação ainda está em fase de desenvolvimento (Beta) e, por isso, pode apresentar eventuais erros em certas funcionalidades. Sinta-se encorajado a informar qualquer bug ou oferecer sugestões entrando em contato comigo em qualquer uma das minhas redes sociais listadas abaixo.</p>
+          <p>Esta aplicação está em constante desenvolvimento e, por isso, pode apresentar eventuais erros em certas funcionalidades. Sinta-se encorajado a informar qualquer bug ou oferecer sugestões entrando em contato comigo em qualquer uma das minhas redes sociais listadas abaixo.</p>
           <p>Esta é uma aplicação Open Source hospedada no portal Vercel. Seu repositório está disponível na minha página do GitHub, listada abaixo.</p>
         </section>
     </div>
 </template>
 
 <script>
+import { mapGetters } from 'vuex'
 export default {
     name: 'About',
+    computed: {
+      ...mapGetters ([
+        'versao'
+      ])
+    }
 }
 </script>
 
