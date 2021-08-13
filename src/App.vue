@@ -84,7 +84,7 @@ html {
   }
   min-width: 100vw;
   min-height: 100vh;
-  background-image: url(https://i.pinimg.com/originals/5d/ab/4d/5dab4d5e50156cb929c1b1946085bdde.jpg);
+  background-image: url('https://pbs.twimg.com/media/E8tBYWSWQAIeXMN?format=jpg&name=4096x4096');
   background-position: 0 0;
   background-repeat: no-repeat;
   background-attachment: fixed;
