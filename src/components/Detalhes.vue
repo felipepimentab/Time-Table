@@ -126,6 +126,7 @@ $cinza-claro: #ebebeb;
     }
     h2, h3, h4, li, p, a {
         font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+        font-weight: normal;
         padding: 0 0 1rem 0;
         margin: 0;
         color: $cinza-pastel;
@@ -143,9 +144,6 @@ $cinza-claro: #ebebeb;
     .link {
         display: flex;
         align-items: center;
-    }
-    a, p {
-        font-weight: 600;
     }
     a.moodle {
         margin-left: 0.2rem;

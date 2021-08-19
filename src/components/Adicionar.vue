@@ -223,9 +223,9 @@ $cinza-claro: #ebebeb;
     align-items: flex-start;
     text-align: start;
     color: $cinza-claro;
-    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     h2 {
         margin: 0 0 0.5rem 0;
+        font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     }
     h3, h4 {
         margin: 0 0 0.5rem 0;
@@ -264,6 +264,9 @@ $cinza-claro: #ebebeb;
     }
     form {
         width: 100%;
+        h3, h4 {
+            font-weight: normal;
+        }
     }
     
     input {
@@ -281,6 +284,7 @@ $cinza-claro: #ebebeb;
     }
     .add {
         font-size: 1.2rem;
+        font-weight: bold;
         width: calc(100% - 0.6rem);
         transition: all 200ms linear;
         &:hover {
@@ -291,7 +295,7 @@ $cinza-claro: #ebebeb;
 
 @media screen and (min-width: 700px) {
   #adicionar {
-    align-self: center;
+    align-self: start;
   }
 }
 </style>
