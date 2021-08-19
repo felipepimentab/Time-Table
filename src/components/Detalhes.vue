@@ -7,7 +7,7 @@
             <div v-if="disciplina.link!=''" class="link">
                 <p>Site:</p><a :href="disciplina.link" target="_blank" class="moodle"> {{ disciplina.site }}</a>
             </div>
-            <div>
+            <div v-if="disciplina.aula!=''">
                 <p>Link para aula on-line:</p><a :href="disciplina.aula" target="_blank">{{ disciplina.aula }}</a>
             </div>
         </div>
