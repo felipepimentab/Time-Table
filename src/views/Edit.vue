@@ -55,7 +55,7 @@ $cinza-claro: #ebebeb;
   border: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   top: 0;
   left: 0;
   h1 {
