@@ -15,8 +15,11 @@
             <label for="site">Site:</label><br>
             <input type="text" name="site" class="infos" v-model="disciplina.site" placeholder="Nome do portal"><br>
 
-            <label for="link">Link:</label><br>
+            <label for="link">Link do site:</label><br>
             <input type="url" name="link" class="infos" v-model="disciplina.link" placeholder="http://www.endereço.com.br"><br>
+
+            <label for="aula">Link para aula on-line:</label><br>
+            <input type="url" name="aula" class="infos" v-model="disciplina.aula" placeholder="http://meet.google.com/codigo-da-sala"><br>
 
             <h3>Horário *</h3>
 
@@ -228,6 +231,7 @@ export default {
                 professor: '',
                 site: '',
                 link: '',
+                aula: '',
                 cor: '',
                 tarefas: [],
             },
@@ -269,6 +273,7 @@ export default {
                 this.disciplina.professor,
                 this.disciplina.site,
                 this.disciplina.link,
+                this.disciplina.aula,
                 this.disciplina.cor
             );
             dis.push(this.disciplina);
@@ -280,7 +285,7 @@ export default {
                 }
             }
             this.$store.commit('SET_ORGANIZADOR', org)
-            this.disciplina = {codigo: '', nome: '', professor: '', site: '', link: '', cor: '', tarefas: []}
+            this.disciplina = {codigo: '', nome: '', professor: '', site: '', link: '', aula: '', cor: '', tarefas: []}
             this.posicao = [
                 false, false, false, false, false, 
                 false, false, false, false, false, 

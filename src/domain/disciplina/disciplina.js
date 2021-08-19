@@ -1,11 +1,12 @@
 export default class Disciplina {
-    constructor(codigo, nome, professor, site, link, cor, tarefas=[]) {
+    constructor(codigo, nome, professor, site, link, aula, cor, tarefas=[]) {
         this.id = this.randomId();
         this.codigo = codigo;
         this.nome = nome;
         this.professor = professor;
         this.site = site;
         this.link = link;
+        this.aula = aula;
         this.cor = cor;
         this.tarefas = tarefas;
     }
