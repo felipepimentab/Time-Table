@@ -55,7 +55,7 @@ $cinza-claro: #ebebeb;
   border: none;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   top: 0;
   left: 0;
   h1 {
@@ -87,6 +87,7 @@ $cinza-claro: #ebebeb;
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   justify-content: space-between;
 }
 
