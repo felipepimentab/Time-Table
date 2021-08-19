@@ -17,6 +17,7 @@
             <input type="text" v-model="model.professor" required>
             <input type="text" v-model="model.site" placeholder="Site">
             <input type="text" v-model="model.link" placeholder="Link">
+            <input type="text" v-model="model.aula" placeholder="Aula on-line">
             <select name="cor" id="cor" class="drop-down" v-model="model.cor" required>
                 <option value="lime">Lime</option>
                 <option value="spring">Spring</option>
