@@ -108,11 +108,12 @@ export default {
 
 <style lang="scss" scoped>
 h3 {
-    font-family: 'SF Rounded', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+    font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
     margin: 0.3rem 0 0.3rem 0;
 }
 h4 {
     font-family: 'SF Pro', 'Helvetica Nue', Helvetica, Arial, sans-serif;
+    font-weight: normal;
     margin: 0.3rem 0 0.3rem 0;
 }
 .flex {
